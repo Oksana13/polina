@@ -1,0 +1,9 @@
+.buffer {
+  padding-top: 40px;
+}
+span.editable {
+  display: inline-block;
+  min-width: 100px;
+  height: 15px;
+  text-decoration: underline;
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Polina</title>
+        <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+      <link rel="stylesheet" href="styles/etch.css" />
+      <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div id="application" class="article">
+                <div class="body editable" data-button-class="all">
+                    <div class="row buffer">
+                        <!--TODO change borders for entering text to highlighted spans/inputs-->
+                        <div class="col-sm-4 col-sm-offset-7">
+                            <p>В ___________________________</p>
+                            <p>(наименование медицинского учреждения)</p>
+
+                            <p>___________________________</p>
+                            <p>(адрес медицинского учреждения)</p>
+
+                            <p>от ФИО___________________________</p>
+                            <p>дата рождения___________________________</p>
+                            <p>паспорт___________________________</p>
+                            <p>выдан: ___________________________</p>
+                            <p>зарегистрирован(на) по адресу______________________</p>
+                            <p>адрес фактического места жительства и направления корреспонденции:___________________________</p>
+                            <p>номер телефона:___________________________</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 buffer">
+
+                        <h4 class="text-center">З А Я В Л Е Н И Е</h4>
+                            <p class="text-center"><strong>о предоставлении копий медицинских документов</strong></p>
+
+
+                    <p class="buffer">Я, ________________________________________________________________________(ФИО)
+                    _________________________________г. (указать дату) обратилась за медицинской помощью в___________________________________(указать наименование медицинского учреждения).</p>
+
+                    <p>В соответствии со ст.22 Федерального закона от 21.11.2011 №323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации". каждый имеет право получить в доступной для него форме имеющуюся в медицинской организации информацию о состоянии своего здоровья, в том числе сведения о результатах медицинского обследования, наличии заболевания, об установленном диагнозе и о прогнозе развития заболевания, методах оказания медицинской помощи, связанном с ними риске, возможных видах медицинского вмешательства, его последствиях и результатах оказания медицинской помощи.</p>
+                    <p>Пациент либо его законный представитель имеет право непосредственно знакомиться с медицинской документацией, отражающей состояние его здоровья, в порядке, установленном уполномоченным федеральным органом исполнительной власти, и получать на основании такой документации консультации у других специалистов.</p>
+                    <p>Пациент либо его законный представитель имеет право на основании письменного заявления получать отражающие состояние здоровья медицинские документы, их копии и выписки из медицинских документов.</p>
+
+                    <p>На основании вышеизложенного прошу в пятидневный срок предоставить копию медицинской карты ________________________________________________(ФИО), ______________________г.р., заверенноую надлежащим образом.</p>
+                    <p>О готовности копий медицинских документов прошу сообщить по телефону _______________________ для получения документов на руки (лично).</p>
+
+                        <div class="row">
+                            <div class="col-sm-12 text-center buffer">
+                                «_____»______________201__г.			(________________________________)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-10 buffer">
+                    <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
+                </div>
+                <div class="col-sm-12 buffer"></div>
+            </div>
+        </div>
+        <script src="bower_components/jquery-1.12.4.min/index.js"></script>
+        <script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <script src="bower_components/backbone/backbone-min.js"></script>
+        <script src="bower_components/rangy/rangy-core.js"></script>
+        <script src="scripts/etch.js"></script>
+        <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+        <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
+        <script src="scripts/save.to.pdf.js "></script>
+        <script>
+          rangy.init();
+          rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
+        </script>
+        <script>
+        (function() {
+            var article = Backbone.Model.extend({
+                defaults: {
+                    title: 'Default Title',
+                    body: 'Default body text'
+                }
+            });
+
+            var articleView = Backbone.View.extend({
+                initialize: function() {
+                    _.bindAll(this, 'save')
+                    this.model.bind('save', this.save);
+                },
+
+                events: {
+                    'mousedown .editable': 'editableClick'
+                },
+
+                editableClick: etch.editableInit,
+
+                save: function() {
+
+                    // normally you would call model.save() here but this is a demo
+                    // $(this.el).find('.editable').effect('highlight', {color: 'yellow'});
+                    // $('.save-event').fadeIn('fast', function() {
+                    //     setTimeout($(this).fadeOut('slow'), 10000);
+                    // });
+                }
+
+            });
+
+            $article = $('.article');
+            var model = new article();
+            var view = new articleView({model: model, el: $article[0], tagName: $article[0].tagName});
+        })()
+        </script>
+    </body>
+</html>
