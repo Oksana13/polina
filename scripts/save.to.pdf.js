@@ -143,7 +143,7 @@ function ParseElement(cnt, e, p, styles) {
             cnt.push(st);
             break;
         }
-        case "div":case "p": {
+        case "div": case "p": case "h1": case "h2": case "h3":{
         p = CreateParagraph();
         var st = {stack: []}
         st.stack.push(p);
@@ -152,7 +152,19 @@ function ParseElement(cnt, e, p, styles) {
 
         cnt.push(st);
         break;
-    }
+        }
+        case 'h4': {
+            p = CreateParagraph();
+            var st = {stack: []}
+            st.stack.push(p);
+            ComputeStyle(st, styles.concat(["text-align:center"]));
+            ParseContainer(st.stack, e, p);
+
+            cnt.push(st);
+        }
+            // TODO add margins after paragraph
+            // TODO add head alignment
+            
         default: {
             console.log("Parsing for node " + e.nodeName + " not found");
             break;

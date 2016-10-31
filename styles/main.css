@@ -7,3 +7,20 @@ span.editable {
   height: 15px;
   text-decoration: underline;
 }
+span.text-input {
+  min-width: 200px;
+  height: 20px;
+  vertical-align: bottom;
+  text-align: left;
+  display: inline-block;
+  border-bottom: 1px solid #000;
+}
+span.text-input.text-xs {
+  min-width: 40px;
+}
+.p {
+  font-size: 16px;
+}
+p {
+  font-size: 16px;
+}
