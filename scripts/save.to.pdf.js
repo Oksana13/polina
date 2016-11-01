@@ -44,6 +44,13 @@ function ComputeStyle(o, styles) {
                     }
                     break;
                 }
+
+                case "width": {
+                    switch (st[1]) {
+                        case "width": o.width = "500px"; break;
+                    }
+                    break;
+                }
             }
         }
     }
@@ -145,8 +152,9 @@ function ParseElement(cnt, e, p, styles) {
         }
         case "div": case "p": case "h1": case "h2": case "h3":{
         p = CreateParagraph();
-        var st = {stack: []}
+        var st = {stack: []};
         st.stack.push(p);
+        st.stack.push('\n');
         ComputeStyle(st, styles);
         ParseContainer(st.stack, e, p);
 
@@ -154,17 +162,15 @@ function ParseElement(cnt, e, p, styles) {
         break;
         }
         case 'h4': {
-            p = CreateParagraph();
-            var st = {stack: []}
-            st.stack.push(p);
+            h = CreateParagraph();
+            var st = {stack: []};
+            st.stack.push(h);
             ComputeStyle(st, styles.concat(["text-align:center"]));
-            ParseContainer(st.stack, e, p);
+            ParseContainer(st.stack, e, h);
 
             cnt.push(st);
         }
-            // TODO add margins after paragraph
-            // TODO add head alignment
-            
+
         default: {
             console.log("Parsing for node " + e.nodeName + " not found");
             break;
@@ -182,6 +188,28 @@ function ParseHtml(cnt, htmlText) {
 function CreateParagraph() {
     var p = {text:[]};
     return p;
+}
+
+function CreateHeaderDiv() {
+    var p = {
+        columns: [
+            {
+                width: '*',
+                text: ''
+            },
+            {
+                width: 200,
+                text: 'This paragraph fills full width, as there are no columns. Next paragraph however consists of three columns'
+            }
+        ]
+
+    };
+    return p;
+}
+
+function addSpace() {
+    var space = {text:["                                          "]};
+    return space;
 }
 
 function downloadPdf () {

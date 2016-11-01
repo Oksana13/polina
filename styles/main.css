@@ -1,6 +1,9 @@
 .buffer {
   padding-top: 40px;
 }
+.editable {
+  outline: none;
+}
 span.editable {
   display: inline-block;
   min-width: 100px;
@@ -23,4 +26,48 @@ span.text-input.text-xs {
 }
 p {
   font-size: 16px;
+}
+h4 {
+  margin-bottom: 0;
+}
+section {
+  display: inline-block;
+  width: 500px;
+}
+.application-header {
+  width: 61%;
+  float: right;
+}
+@media (max-width: 1200px) {
+  .application-header {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .application-header {
+    float: none;
+    margin: 0 20px;
+  }
+}
+@media (max-width: 900px) {
+  .application-header td:first-child {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .application-header td:nth-child(2) {
+    width: 100%;
+  }
+}
+@media only print {
+  .btn {
+    display: none;
+  }
+  @page {
+    margin: 0 40px;
+  }
+  .application-header {
+    width: 500px;
+    float: right;
+  }
 }

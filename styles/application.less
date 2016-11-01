@@ -2,6 +2,10 @@
   padding-top: 40px;
 }
 
+.editable {
+  outline: none;
+}
+
 span {
   &.editable {
     display: inline-block;
@@ -30,4 +34,57 @@ span {
 
 p {
   .p
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+section {
+  display: inline-block;
+  width: 500px;
+}
+
+.application-header {
+  width: 61%;
+  float: right;
+
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    float: none;
+    margin: 0 20px;
+  }
+
+  td:first-child {
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+
+  td:nth-child(2) {
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+  }
+}
+
+
+@media only print {
+  .btn {
+    display: none;
+  }
+
+  @page {
+    margin: 0 40px;
+  }
+
+  .application-header {
+    width: 500px;
+    float: right;
+  }
+
+
 }

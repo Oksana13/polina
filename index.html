@@ -12,22 +12,27 @@
             <div id="application" class="article">
                 <div class="body editable" data-button-class="all">
                     <div class="row buffer">
-                        <!--TODO change borders for entering text to highlighted spans/inputs-->
-                        <div class="col-sm-4 col-sm-offset-7">
-                            <p>В <span class="text-input"></span></p>
-                            <p>(наименование медицинского учреждения)</p>
+                       <table class="application-header">
+                           <tr>
+                               <td width="50%"></td>
+                               <td width="50%">
+                                   <!--TODO: fix border of text-input  on new line of text-->
+                                   <p>В <span class="text-input"></span></p>
+                                   <p>(наименование медицинского учреждения)</p>
 
-                            <p><span class="text-input"></span></p>
-                            <p>(адрес медицинского учреждения)</p>
+                                   <p><span class="text-input"></span></p>
+                                   <p>(адрес медицинского учреждения)</p>
 
-                            <p>от ФИО <span class="text-input"></span></p>
-                            <p>дата рождения <span class="text-input"></span></p>
-                            <p>паспорт <span class="text-input"></span></p>
-                            <p>выдан: <span class="text-input"></span></p>
-                            <p>зарегистрирован(на) по адресу <span class="text-input"></span></p>
-                            <p>адрес фактического места жительства и направления корреспонденции: <span class="text-input"></span></p>
-                            <p>номер телефона: <span class="text-input"></span></p>
-                        </div>
+                                   <p>от ФИО <span class="text-input"></span></p>
+                                   <p>дата рождения <span class="text-input"></span></p>
+                                   <p>паспорт <span class="text-input"></span></p>
+                                   <p>выдан: <span class="text-input"></span></p>
+                                   <p>зарегистрирован(на) по адресу <span class="text-input"></span></p>
+                                   <span>адрес фактического места жительства и направления корреспонденции: <span class="text-input"></span></span>
+                                   <span>номер телефона: <span class="text-input"></span></span>
+                               </td>
+                           </tr>
+                       </table>
                     </div>
 
                     <div class="row">
@@ -35,6 +40,7 @@
 
                         <h4 class="text-center">З А Я В Л Е Н И Е</h4>
                             <h4 class="text-center p"><strong>о предоставлении копий медицинских документов</strong></h4>
+                            <br>
 
 
                     <p class="buffer">Я, <span class="text-input"></span>(ФИО)
@@ -60,9 +66,12 @@
             <div class="row">
                 <div class="col-sm-10 buffer">
                     <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
+                    <!--<a onClick="window.print()"class="btn btn-primary pull-right">Распечатать заявление или сохранить в PDF</a>-->
                 </div>
                 <div class="col-sm-12 buffer"></div>
             </div>
+
+
         </div>
         <script src="bower_components/jquery-1.12.4.min/index.js"></script>
         <script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
