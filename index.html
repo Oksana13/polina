@@ -11,26 +11,26 @@
     <body>
         <div class="container">
             <div id="application" class="article">
-                <div class="body editable" data-button-class="all">
+                <div id="editable" class="body editable" data-button-class="all">
                     <div class="row buffer">
                        <table class="application-header">
                            <tr>
                                <td width="50%"></td>
                                <td width="50%">
                                    <!--TODO: fix border of text-input  on new line of text-->
-                                   <p>В <span class="text-input"></span></p>
+                                   <p>В <span id="in" class="text-input"></span></p>
                                    <p>(наименование медицинского учреждения)</p>
 
-                                   <p><span class="text-input"></span></p>
+                                   <p><span id="med-address" class="text-input"></span></p>
                                    <p>(адрес медицинского учреждения)</p>
 
-                                   <p>от ФИО <span class="text-input"></span></p>
-                                   <p>дата рождения <span class="text-input"></span></p>
-                                   <p>паспорт <span class="text-input"></span></p>
-                                   <p>выдан: <span class="text-input"></span></p>
-                                   <p>зарегистрирован(на) по адресу <span class="text-input"></span></p>
-                                   <span>адрес фактического места жительства и направления корреспонденции: <span class="text-input"></span></span>
-                                   <span>номер телефона: <span class="text-input"></span></span>
+                                   <p>от ФИО <span id="from-name" class="text-input"></span></p>
+                                   <p>дата рождения <span id="birth" class="text-input"></span></p>
+                                   <p>паспорт <span id="passport" class="text-input"></span></p>
+                                   <p>выдан: <span id="issued" class="text-input"></span></p>
+                                   <p>зарегистрирован(на) по адресу <span id="registered" class="text-input"></span></p>
+                                   <span>адрес фактического места жительства и направления корреспонденции: <span id="fact-address" class="text-input"></span></span>
+                                   <span>номер телефона: <span id="phone" class="text-input"></span></span>
                                </td>
                            </tr>
                        </table>
@@ -44,8 +44,8 @@
                             <br>
 
 
-                    <p class="buffer">Я, <span class="text-input"></span>(ФИО)
-                        <span class="text-input"></span>г. (указать дату) обратилась за медицинской помощью в <span class="text-input"></span> (указать наименование медицинского учреждения).</p>
+                    <p class="buffer">Я, <span id="name" class="text-input"></span>(ФИО)
+                        <span id="date" class="text-input"></span>г. (указать дату) обратилась за медицинской помощью в <span id="med-name" class="text-input"></span> (указать наименование медицинского учреждения).</p>
 
                     <p>В соответствии со ст.22 Федерального закона от 21.11.2011 №323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации". каждый имеет право получить в доступной для него форме имеющуюся в медицинской организации информацию о состоянии своего здоровья, в том числе сведения о результатах медицинского обследования, наличии заболевания, об установленном диагнозе и о прогнозе развития заболевания, методах оказания медицинской помощи, связанном с ними риске, возможных видах медицинского вмешательства, его последствиях и результатах оказания медицинской помощи.</p>
                     <p>Пациент либо его законный представитель имеет право непосредственно знакомиться с медицинской документацией, отражающей состояние его здоровья, в порядке, установленном уполномоченным федеральным органом исполнительной власти, и получать на основании такой документации консультации у других специалистов.</p>
@@ -67,11 +67,10 @@
             <div class="row">
                 <div class="col-sm-10 buffer">
                     <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
-                    <!--<a onClick="window.print()"class="btn btn-primary pull-right">Распечатать заявление или сохранить в PDF</a>-->
+                    <a onClick="send()" class="btn btn-primary pull-right">Отправить заявление юристам</a>
                 </div>
                 <div class="col-sm-12 buffer"></div>
             </div>
-
 
         </div>
         <script src="bower_components/jquery-1.12.4.min/index.js"></script>
@@ -82,7 +81,9 @@
         <script src="scripts/etch.js"></script>
         <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
         <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
-        <script src="scripts/save.to.pdf.js "></script>
+        <!--<script src="scripts/save.to.pdf.js "></script>-->
+        <script src="scripts/to.pdf.js "></script>
+        <script src="scripts/to.polina.js "></script>
         <script>
           rangy.init();
           rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
