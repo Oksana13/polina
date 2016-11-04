@@ -17,7 +17,6 @@
                            <tr>
                                <td width="50%"></td>
                                <td width="50%">
-                                   <!--TODO: fix border of text-input  on new line of text-->
                                    <p>В <span id="in" class="text-input"></span></p>
                                    <p>(наименование медицинского учреждения)</p>
 
@@ -65,9 +64,10 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-10 buffer">
+                <div class="col-sm-8 col-sm-offset-2 buffer">
                     <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
-                    <a onClick="send()" class="btn btn-primary pull-right">Отправить заявление юристам</a>
+                    <a onClick="window.print()" class="btn btn-primary pull-right print">Распечатать заявление</a>
+                    <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
                 </div>
                 <div class="col-sm-12 buffer"></div>
             </div>
