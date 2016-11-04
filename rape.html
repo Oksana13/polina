@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Polina</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/etch.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<div class="container">
+    <div id="application" class="article">
+        <div id="editable" class="body editable" data-button-class="all">
+            <div class="row buffer">
+                <table class="application-header">
+                    <tr>
+                        <td width="50%"></td>
+                        <td width="50%">
+                            <p id="header">В следственный отдел ГСУ СК РФ по <span class="text-input"></span> району г.Санкт-Петербурга
+                                <br>
+                                от ФИО <span class="text-input"></span> <br>
+                                дата рождения <span class="text-input"></span> <br>
+                                паспорт <span class="text-input"></span> <br>
+                                выдан: <span class="text-input"></span> <br>
+                                зарегистрирован(на) по адресу <span class="text-input"></span> <br>
+                                адрес фактического места жительства и направления корреспонденции: <span class="text-input"></span>
+                                <br>
+                                номер телефона: <span id="phone" class="text-input"></span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 buffer">
+
+                    <h4 class="text-center">ЗАЯВЛЕНИЕ</h4>
+                    <h4 class="text-center p"><strong>о возбуждении  уголовного дела</strong></h4>
+
+
+                    <p id="date" class="buffer">"<span class="text-input text-xs"></span>"<span class="text-input text-xs"></span> 20<span class="text-input text-xs"></span>г. в отношении меня неизвестным мне мужчиной (если преступление совершено известным указать ФИО, адрес и другую известную информацию) были совершены изнасилование и насильственные действия сексуального характера.
+                    </p>
+
+                    <p id="description">Описание события преступления (место, время, были ли свидетели, как  развивались события предшествовавшие преступлению и  после него, другую информацию, которая может способствовать раскрытию преступления) :
+                        <br>
+                        <span class="text-input text-xl"></span>
+                    </p>
+
+                    <p id="damage">Описать телесные повреждения, если остались (гематомы, ссадины и т.д.)
+                        <br>
+                        <span class="text-input text-xl"></span>
+                    </p>
+
+                    <p id="marks">Сообщить остались ли следы преступления  и где они находятся (одежда, белье и т.д., если есть возможность упаковать в чистые полиэтиленовые мешки и сохранить до изъятия органами следствия)
+                        <br>
+                        <span class="text-input text-xl"></span>
+                    </p>
+
+                    <p>Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в соответствии со ст.306 Уголовного кодекса Российской Федерации.
+                    </p>
+
+                    <p>На основании изложенного, прошу установить лицо, совершившее в отношении меня преступление (или указать ФИО известного), и привлечь его к уголовной ответственности.
+                    </p>
+
+                    <p>Также прошу направить меня в экспертную организацию для прохождения судебно-медицинского освидетельствования (экспертизы).
+                    </p>
+
+                    <div class="row">
+                        <div id="signature" class="col-sm-12 text-center buffer">
+                            «<span class="text-input text-xs"></span>»<span class="text-input"></span>201<span
+                                class="text-input text-xs"></span>г. ( <span class="text-input"></span> )
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 buffer">
+            <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
+            <a onClick="window.print()" class="btn btn-primary pull-right print">Распечатать заявление</a>
+            <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
+        </div>
+        <div class="col-sm-12 buffer"></div>
+    </div>
+
+</div>
+<script src="bower_components/jquery-1.12.4.min/index.js"></script>
+<script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/backbone/backbone-min.js"></script>
+<script src="bower_components/rangy/rangy-core.js"></script>
+<script src="scripts/etch.js"></script>
+<script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+<script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
+<script src="scripts/rape.to.pdf.js "></script>
+<script src="scripts/to.polina.js "></script>
+<script>
+    rangy.init();
+    rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
+</script>
+<script>
+    (function () {
+        var article = Backbone.Model.extend({
+            defaults: {
+                title: 'Default Title',
+                body: 'Default body text'
+            }
+        });
+
+        var articleView = Backbone.View.extend({
+            initialize: function () {
+                _.bindAll(this, 'save')
+                this.model.bind('save', this.save);
+            },
+
+            events: {
+                'mousedown .editable': 'editableClick'
+            },
+
+            editableClick: etch.editableInit,
+
+            save: function () {
+
+            }
+
+        });
+
+        $article = $('.article');
+        var model = new article();
+        var view = new articleView({model: model, el: $article[0], tagName: $article[0].tagName});
+    })()
+</script>
+</body>
+</html>
