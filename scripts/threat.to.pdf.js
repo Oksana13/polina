@@ -2,9 +2,14 @@ function downloadPdf () {
 
     var header = $('#header').text(),
         date = $('#date').text(),
-        description = $('#description').text(),
-        damage = $('#damage').text(),
-        marks = $('#marks').text(),
+        text1 = $('#text1').text(),
+        text2 = $('#text2').text(),
+        text3 = $('#text3').text(),
+        text4 = $('#text4').text(),
+        text5 = $('#text5').text(),
+        text6 = $('#text6').text(),
+        text7 = $('#text7').text(),
+        text8 = $('#text8').text(),
         signature = $('#signature').text();
 
     var applicationText = {
@@ -25,7 +30,7 @@ function downloadPdf () {
                         text: 'З А Я В Л Е Н И Е'
                     },
                     {
-                        text: 'о возбуждении  уголовного дела'
+                        text: 'о возбуждении  уголовного дела по факту угрозы убийством (угрозе причинения тяжкого вреда здоровью)'
                     }
                 ],
                 margin: [0, 30],
@@ -36,27 +41,35 @@ function downloadPdf () {
                 margin: [0, 0, 0, 10]
             },
             {
-                text: description,
+                text: text1,
                 margin: [0, 0, 0, 10]
             },
             {
-                text: damage,
+                text: text2,
                 margin: [0, 0, 0, 10]
             },
             {
-                text: marks,
+                text: text3,
                 margin: [0, 0, 0, 10]
             },
             {
-                text: 'Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в соответствии со ст.306 Уголовного кодекса Российской Федерации.',
+                text: text4,
                 margin: [0, 0, 0, 10]
             },
             {
-                text: 'На основании изложенного, прошу установить лицо, совершившее в отношении меня преступление (или указать ФИО известного), и привлечь его к уголовной ответственности.',
+                text: text5,
                 margin: [0, 0, 0, 10]
             },
             {
-                text: 'Также прошу направить меня в экспертную организацию для прохождения судебно-медицинского освидетельствования (экспертизы).',
+                text: text6,
+                margin: [0, 0, 0, 10]
+            },
+            {
+                text: text7,
+                margin: [0, 0, 0, 10]
+            },
+            {
+                text: text8,
                 margin: [0, 0, 0, 10]
             },
             {
@@ -64,21 +77,8 @@ function downloadPdf () {
                 margin: [0, 0, 0, 10],
                 alignment: 'right'
             }
-
         ]
     };
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     pdfMake.createPdf(applicationText).download();

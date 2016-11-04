@@ -15,19 +15,18 @@
             <div class="row buffer">
                 <table class="application-header">
                     <tr>
-                        <td width="50%"></td>
-                        <td width="50%">
-                            <p>В <span id="in" class="text-input text-xs"></span> отдел полиции <span id="police-addr"
-                                                                                                      class="text-input text-xs"></span>
-                                района г.Санкт-Петербурга</p>
-                            <p>от ФИО <span id="from-name" class="text-input"></span></p>
-                            <p>дата рождения <span id="birth" class="text-input"></span></p>
-                            <p>паспорт <span id="passport" class="text-input"></span></p>
-                            <p>выдан: <span id="issued" class="text-input"></span></p>
-                            <p>зарегистрирован(на) по адресу <span id="registered" class="text-input"></span></p>
-                            <span>адрес фактического места жительства и направления корреспонденции: <span
-                                    id="fact-address" class="text-input"></span></span>
-                            <span>номер телефона: <span id="phone" class="text-input"></span></span>
+                        <td width="40%"></td>
+                        <td width="60%">
+                            <p id="header">В <span class="text-input text-xs"></span> отдел полиции <span class="text-input text-xs"></span> района г.Санкт-Петербурга <br>
+                            от ФИО <span class="text-input"></span> <br>
+                            дата рождения <span class="text-input"></span> <br>
+                            паспорт <span class="text-input"></span> <br>
+                            выдан: <span class="text-input"></span> <br>
+                            зарегистрирован(на) по адресу <span class="text-input"></span> <br>
+                            адрес фактического места жительства и направления корреспонденции: <span class="text-input"></span>
+                            <br>
+                            номер телефона: <span class="text-input"></span>
+                            </p>
                         </td>
                     </tr>
                 </table>
@@ -41,66 +40,85 @@
                             побоев</strong></h4>
 
 
-                        <p class="buffer">Дата и время события: <span id="date" class="text-input"></span></p>
+                        <p class="buffer" id="date">Дата и время события: <span class="text-input"></span></p>
 
-                        <p>Место совершения преступления (подробно):</p>
-                        <p><span id="place" class="text-input text-xl"></span></p>
-                        <p>Описание события преступления (подробно как наносились удары, в какую часть тела, чем или
+                        <p id="text1">Место совершения преступления (подробно): <br>
+                            <span class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text2">Описание события преступления (подробно как наносились удары, в какую часть тела, чем или
                             какой частью тела, сколько ударов, сколько времени продолжались насильственные действия
-                            (избиение):</p>
-                        <p><span id="description" class="text-input text-xl"></span></p>
-                        <p>Побои мне нанес ФИО <span id="attacker-name" class="text-input"></span>, который является
-                            моим <span class="red remove">(указать кем приходится потерпевшей лицо, нанесшее побои: супруг, родители, дети, усыновители, усыновленные (удочеренные) дети, родные братья и сестры, дедушки, бабушки, внуки) опекуны, попечители, а также лица, состоящие в свойстве с лицом, совершившим деяние, предусмотренное настоящей статьей, или лица, ведущие с ним общее хозяйство)</span>
-                            <span id="attacker-relations" class="text-input"></span>.</p>
-                        <p>Указать была ли проведена фотосъемка телесных повреждений (где, когда, с помощью каких
-                            технических средств, в присутствии каких свидетелей)</p>
-                        <p><span id="photo" class="text-input text-xl"></span></p>
-                        <p>Указать свидетелей, если они были (ФИО, где находились в момент совершения преступления, что
-                            видели, слышали, что могут подтвердить):</p>
-                        <p><span id="witness" class="text-input text-xl"></span></p>
-                        <p>Дата, время обращения в медицинское учреждение, если было такое обращение (наименование
+                            (избиение): <br>
+                            <span id="description" class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text3">Побои мне нанес ФИО <span class="text-input"></span>, который является
+                            моим <span class="red not-printable">(указать кем приходится потерпевшей лицо, нанесшее побои: супруг, родители, дети, усыновители, усыновленные (удочеренные) дети, родные братья и сестры, дедушки, бабушки, внуки) опекуны, попечители, а также лица, состоящие в свойстве с лицом, совершившим деяние, предусмотренное настоящей статьей, или лица, ведущие с ним общее хозяйство)</span>
+                            <span class="text-input"></span></p>
+
+                        <p id="text4">Указать была ли проведена фотосъемка телесных повреждений (где, когда, с помощью каких
+                            технических средств, в присутствии каких свидетелей) <br>
+                            <span class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text5">Указать свидетелей, если они были (ФИО, где находились в момент совершения преступления, что
+                            видели, слышали, что могут подтвердить): <br>
+                            <span class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text6">Дата, время обращения в медицинское учреждение, если было такое обращение (наименование
                             медицинского учреждения, адрес дата и время обращения, описание телесных повреждений
-                            зафиксированных врачом, диагноз, кратко описать дальнейшее лечение, если было)</p>
-                        <p><span id="med-date" class="text-input text-xl"></span></p>
-                        <p>Обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное
+                            зафиксированных врачом, диагноз, кратко описать дальнейшее лечение, если было) <br>
+                            <span class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text7">Обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное
                             поведение; подвергалась ли потерпевшая или кто-либо еще оскорблениям, унижениям, побоям со
                             стороны лица, совершившего преступление; был ли судим, были ли вызовы полиции, результат;
-                            иные сведения характеризующие личность лица, в отношении которого подается заявление):</p>
-                        <p><span id="conditions" class="text-input text-xl"></span></p>
-                        <p>Таким образом, в результате неправомерных действий <span id="attacker"
-                                                                                    class="text-input"></span> ФИО лица
+                            иные сведения характеризующие личность лица, в отношении которого подается заявление): <br>
+                            <span class="text-input text-xl"></span>
+                        </p>
+
+                        <p id="text8">Таким образом, в результате неправомерных действий <span class="text-input"></span> ФИО лица
                             совершившего преступление) мне были причинены телесные повреждения, причинивших физическую
                             боль, но не повлекших последствий, указанных в ст.115 Уголовного Кодекса РФ.</p>
-                        <p>В связи с неправомерными действиями <span id="attacker-fio" class="text-input"></span> (ФИО
+
+                        <p id="text9">В связи с неправомерными действиями <span class="text-input"></span> (ФИО
                             лица совершившего преступление) характеризуются виной в форме прямого умысла, поскольку он:
                             <br>
                             - осознавал общественно опасный характер своих действий - покушение на мое здоровье. На это
-                            указывает способ совершения преступления (<span id="poboi" class="text-input"></span>
+                            указывает способ совершения преступления (<span class="text-input"></span>
                             (указать каким образом наносились побои).
                             <br>
                             - предвидел возможность и неизбежность наступления общественно опасных последствий –
                             причинение телесных повреждений, физической боли.
                         </p>
-                        <p>Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в
+
+                        <p id="text10">Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в
                             соответствии со ст.306 Уголовного кодекса Российской Федерации.
                         </p>
-                        <p>На основании изложенного, прошу:
+
+                        <p id="text11">На основании изложенного, прошу:
                         </p>
-                        <p>1. Возбудить уголовное дело в отношении (указать известные данные):
+
+                        <p id="text12">1. Возбудить уголовное дело в отношении (указать известные данные):
                         </p>
-                        <p>ФИО <span id="name-attacker" class="text-input"></span> <br>
-                            дата рождения <span id="attacker-birth" class="text-input"></span> <br>
-                            паспорт <span id="attacker-passport" class="text-input"></span> <br>
-                            выдан: <span id="attacker-passport-data" class="text-input"></span><br>
-                            зарегистрирован(на) по адресу <span id="attacker-registration" class="text-input"></span>
+
+                        <p id="text13">ФИО <span class="text-input"></span> <br>
+                            дата рождения <span class="text-input"></span> <br>
+                            паспорт <span class="text-input"></span> <br>
+                            выдан: <span class="text-input"></span><br>
+                            зарегистрирован(на) по адресу <span class="text-input"></span>
                             <br>
-                            по факту совершения в отношении меня преступления, предусмотренного ст. 116 УК РФ.</p>
-                        <p>2. Направить меня в экспертную организацию для прохождения судебно-медицинского
+                            по факту совершения в отношении меня преступления, предусмотренного ст. 116 УК РФ.
+                        </p>
+
+                        <p id="text14">2. Направить меня в экспертную организацию для прохождения судебно-медицинского
                             освидетельствования (экспертизы).
                         </p>
 
                         <div class="row">
-                            <div class="col-sm-12 text-center buffer">
+                            <div id="signature" class="col-sm-12 text-center buffer">
                                 «<span class="text-input text-xs"></span>»<span class="text-input"></span>201<span
                                     class="text-input text-xs"></span>г. ( <span class="text-input"></span> )
                             </div>
@@ -142,8 +160,7 @@
     <script src="scripts/etch.js"></script>
     <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
     <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
-    <!--<script src="scripts/save.to.pdf.js "></script>-->
-    <script src="scripts/to.pdf.js "></script>
+    <script src="scripts/poboi.to.pdf.js "></script>
     <script src="scripts/to.polina.js "></script>
     <script>
         rangy.init();
