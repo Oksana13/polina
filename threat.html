@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Polina</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/etch.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+<div class="container">
+    <div id="application" class="article">
+        <div id="editable" class="body editable" data-button-class="all">
+            <div class="row buffer">
+                <table class="application-header">
+                    <tr>
+                        <td width="50%"></td>
+                        <td width="50%">
+                            <p>В <span id="in" class="text-input text-xs"></span> отдел полиции <span id="police-addr"
+                                                                                                      class="text-input text-xs"></span>
+                                района г.Санкт-Петербурга</p>
+                            <p>от ФИО <span id="from-name" class="text-input"></span></p>
+                            <p>дата рождения <span id="birth" class="text-input"></span></p>
+                            <p>паспорт <span id="passport" class="text-input"></span></p>
+                            <p>выдан: <span id="issued" class="text-input"></span></p>
+                            <p>зарегистрирован(на) по адресу <span id="registered" class="text-input"></span></p>
+                            <span>адрес фактического места жительства и направления корреспонденции: <span
+                                    id="fact-address" class="text-input"></span></span>
+                            <span>номер телефона: <span id="phone" class="text-input"></span></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 buffer">
+
+                    <h4 class="text-center">ЗАЯВЛЕНИЕ</h4>
+                    <h4 class="text-center p"><strong>о возбуждении  уголовного дела
+                        по факту угрозы убийством (угрозе причинения тяжкого вреда здоровью)
+                    </strong></h4>
+
+
+                    <p class="buffer">Дата и время события: <span id="date" class="text-input"></span></p>
+
+                    <p>Место совершения преступления (подробно):</p>
+                    <p><span id="place" class="text-input text-xl"></span></p>
+
+                    <p><span id="attacker-name" class="text-input"></span> (ФИО) угрожал мне убийством (или причинением вреда здоровью, указать какого вреда)  при следующих обстоятельствах: </p>
+                    <p><span id="description" class="text-input text-xl"></span> <br>
+                        (указать как высказывались угрозы, применял ли насильнико во время угроз физическую силу, наносил ли удары, были ли в его руках оружие иные предметы, сопособные причинить вред потерпевшему и т.д.)</p>
+
+                    <p>Угроза была высказана в следующей форме: <span id="form" class="text-input"></span> <br>
+                        (подробно описать: процитировать слова или описать жесты и иные формы выражения угрозы).</p>
+
+                    <p>Подтвердить то, что он угрожал мне убийством, могут следующие свидетели:
+                    </p>
+                    <p>1. ФИО, адрес, телефон <span id="witness-1" class="text-input"></span></p>
+                    <p>1. ФИО, адрес, телефон <span id="witness-2" class="text-input"></span></p>
+
+                    <p>Угрозу убийством <span id="attacker-fio" class="text-input"></span> (ФИО) убийством я воспринимаю как реальную, так как у меня имеются основания опасаться осуществления этой угрозы, а именно:
+                    </p>
+                    <p><span id="facts" class="text-input text-xl"></span> <br>
+                        (указать обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное поведение; подвергалась ли потерпевшая или кто-либо еще оскорблениям, унижениям, побоям со стороны лица, совершившего преступление; был ли судим,  были ли вызовы полиции, результат; иные сведения характеризующие личность лица, в отношении которого подается заявление, дающие полагать, что он способен выполнить свои угрозы).
+                    </p>
+                    <p>В связи с вышеизложенным в целях защиты моих здоровья и жизни и членов моей семьи, а также для предотвращения возможных иных преступлений против меня прошу принять меры по наказанию <span id="name-attacker" class="text-input"></span> (ФИО) в уголовном порядке.</p>
+
+                    <p>Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в соответствии со ст.306 Уголовного кодекса Российской Федерации.</p>
+
+                    <div class="row">
+                        <div class="col-sm-12 text-center buffer">
+                            «<span class="text-input text-xs"></span>»<span class="text-input"></span>201<span
+                                class="text-input text-xs"></span>г. ( <span class="text-input"></span> )
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 buffer">
+            <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
+            <a onClick="window.print()" class="btn btn-primary pull-right print">Распечатать заявление</a>
+            <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
+        </div>
+        <div class="col-sm-12 buffer"></div>
+    </div>
+
+</div>
+<script src="bower_components/jquery-1.12.4.min/index.js"></script>
+<script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/backbone/backbone-min.js"></script>
+<script src="bower_components/rangy/rangy-core.js"></script>
+<script src="scripts/etch.js"></script>
+<script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+<script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
+<!--<script src="scripts/save.to.pdf.js "></script>-->
+<script src="scripts/to.pdf.js "></script>
+<script src="scripts/to.polina.js "></script>
+<script>
+    rangy.init();
+    rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
+</script>
+<script>
+    (function () {
+        var article = Backbone.Model.extend({
+            defaults: {
+                title: 'Default Title',
+                body: 'Default body text'
+            }
+        });
+
+        var articleView = Backbone.View.extend({
+            initialize: function () {
+                _.bindAll(this, 'save')
+                this.model.bind('save', this.save);
+            },
+
+            events: {
+                'mousedown .editable': 'editableClick'
+            },
+
+            editableClick: etch.editableInit,
+
+            save: function () {
+
+            }
+
+        });
+
+        $article = $('.article');
+        var model = new article();
+        var view = new articleView({model: model, el: $article[0], tagName: $article[0].tagName});
+    })()
+</script>
+</body>
+</html>

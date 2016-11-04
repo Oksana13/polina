@@ -21,11 +21,17 @@ span.text-input {
 span.text-input.text-xs {
   min-width: 40px;
 }
+span.text-input.text-xl {
+  width: 100%;
+}
 .p {
   font-size: 16px;
 }
 p {
   font-size: 16px;
+}
+.red {
+  color: red;
 }
 h4 {
   margin-bottom: 0;
@@ -33,6 +39,9 @@ h4 {
 section {
   display: inline-block;
   width: 500px;
+}
+.print {
+  margin-right: 20px;
 }
 .application-header {
   width: 61%;
@@ -60,11 +69,13 @@ section {
   }
 }
 @media only print {
-  .btn {
+  .btn,
+  .not-printable {
     display: none;
   }
   @page {
     margin: 0 40px;
+    padding: 40px 0;
   }
   .application-header {
     width: 500px;

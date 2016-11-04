@@ -42,6 +42,10 @@ p {
   .p
 }
 
+.red {
+  color: red;
+}
+
 h4 {
   margin-bottom: 0;
 }
@@ -81,18 +85,14 @@ section {
   }
 }
 
-.clearfix {
-    clear: both;
-}
-
-
 @media only print {
   .btn, .not-printable {
     display: none;
   }
 
   @page {
-    margin: 40px;
+    margin: 0 40px;
+    padding: 40px 0;
   }
 
   .application-header {
