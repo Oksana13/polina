@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
+<header class="not-printable">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 header">
+                <h3>Вы можете заполнить, сохранить и распечатать заявление о преступлении для самостоятельной подачи или для перенаправления юристам Кризисного Центра</h3>
+            </div>
+        </div>
+    </div>
+</header>
 <div class="container">
     <div id="application" class="article">
         <div id="editable" class="body editable" data-button-class="all">
@@ -33,7 +42,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 buffer">
+                    <div class="col-sm-12 buffer content">
 
                         <h4 class="text-center">ЗАЯВЛЕНИЕ</h4>
                         <h4 class="text-center p"><strong>о возбуждении уголовного дела по факту нанесения
@@ -142,14 +151,18 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 buffer">
-                <a href="javascript:downloadPdf()" class="btn btn-primary pull-right">Скачать заявление в PDF</a>
-                <a onClick="window.print()" class="btn btn-primary pull-right print">Распечатать заявление</a>
-                <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
-            </div>
-            <div class="col-sm-12 buffer"></div>
+    <div class="row buffer">
+        <div class="col-sm-3 text-center">
+            <a onClick="window.print()" class="btn btn-primary">Распечатать заявление</a>
         </div>
+        <div class="col-sm-3 text-center">
+            <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
+        </div>
+        <div class="col-sm-3 text-center">
+            <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
+        </div>
+        <div class="col-sm-12 buffer"></div>
+    </div>
 
     </div>
     <script src="bower_components/jquery-1.12.4.min/index.js"></script>

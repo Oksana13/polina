@@ -1,10 +1,11 @@
 var descr = document.getElementById('editable').innerHTML;
+
 data = JSON.stringify(
     {
-        "task_title": "new case",
-        "task_descr": descr,
-        "post_tag": " ",
-        "reward": " "
+        "id": "0",
+        "title": "new case",
+        "descr": "description",
+        "tags": " "
     }
 );
 
