@@ -16,9 +16,9 @@
     // Named sets of buttons to be specified on the editable element
     // in the markup as "data-button-class"   
     buttonClasses: {
-      'default': ['save'],
-      'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link', 'clear-formatting', 'save'],
-      'title': ['bold', 'italic', 'underline', 'save']
+      // 'default': ['save'],
+      'all': ['bold', 'italic', 'underline', 'unordered-list', 'ordered-list', 'link', 'clear-formatting'],
+      'title': ['bold', 'italic', 'underline']
     }
   };
 
@@ -50,7 +50,7 @@
       'click .etch-ordered-list': 'toggleOrderedList',
       'click .etch-link': 'toggleLink',
       'click .etch-image': 'getImage',
-      'click .etch-save': 'save',
+      // 'click .etch-save': 'save',
       'click .etch-clear-formatting': 'clearFormatting'
     },
         

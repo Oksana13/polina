@@ -164,17 +164,5 @@ function downloadPdf () {
     };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     pdfMake.createPdf(applicationText).download();
 }

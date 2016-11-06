@@ -175,41 +175,6 @@
     <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
     <script src="scripts/poboi.to.pdf.js "></script>
     <script src="scripts/to.polina.js "></script>
-    <script>
-        rangy.init();
-        rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
-    </script>
-    <script>
-        (function () {
-            var article = Backbone.Model.extend({
-                defaults: {
-                    title: 'Default Title',
-                    body: 'Default body text'
-                }
-            });
-
-            var articleView = Backbone.View.extend({
-                initialize: function () {
-                    _.bindAll(this, 'save')
-                    this.model.bind('save', this.save);
-                },
-
-                events: {
-                    'mousedown .editable': 'editableClick'
-                },
-
-                editableClick: etch.editableInit,
-
-                save: function () {
-
-                }
-
-            });
-
-            $article = $('.article');
-            var model = new article();
-            var view = new articleView({model: model, el: $article[0], tagName: $article[0].tagName});
-        })()
-    </script>
+    <script src="scripts/script.js "></script>
 </body>
 </html>
