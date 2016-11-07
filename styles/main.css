@@ -4,15 +4,12 @@ body {
 .article {
   background: #fff;
 }
-.buffer {
-  padding-top: 40px;
-}
 header {
   background: #582368;
   color: #fff;
-  padding: 40px 0;
+  padding: 50px 0;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 header h3 {
   margin: 0;
@@ -25,6 +22,9 @@ header h3 {
 }
 .content {
   padding: 0 20px 0 70px;
+}
+.buffer {
+  padding-top: 40px;
 }
 span.editable {
   display: inline-block;
@@ -80,8 +80,9 @@ section {
 }
 @media (max-width: 900px) {
   .application-header {
+    width: 95%;
     float: none;
-    margin: 0 20px;
+    margin: 0 20px 0 50px;
   }
 }
 @media (max-width: 900px) {
