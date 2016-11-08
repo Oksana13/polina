@@ -202,7 +202,7 @@
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
             <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
             </label>
-            <form class="info">
+            <form class="info" onsubmit="send()">
                 <input type="text" id="name"  class="form-control" placeholder="Имя" required>
                 <input type="text" id="email" class="form-control" placeholder="Email" required>
                 <select name="region" class="form-control" id="region" required>
@@ -292,7 +292,7 @@
                     <option value="RU-CHU">Чукотский автономный округ </option>
                     Добавлено через
                 </select>
-                <input type="submit" onclick="send()" class="btn btn-primary pull-left" value="Отправить заявление юристам"></input>
+                <input type="submit"  class="btn btn-primary pull-left" value="Отправить заявление юристам"></input>
             </form>
         </div>
         <div class="col-md-12 buffer"></div>
