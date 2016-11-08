@@ -1,22 +1,14 @@
-var descr = document.getElementById('editable').innerHTML;
-
-data = JSON.stringify(
-    {
-        "id": "0",
-        "title": "new case",
-        "descr": "description",
-        "tags": " "
-    }
-);
+var name = $('#name').val(),
+    email = $('#email').val(),
+    app = $('#editable').text(),
+    description = app + '<br><br>' + name + '<br>' + email;
 
 function send() {
-    $.ajax({
-        type: "POST",
-        url: "../wp-content/themes/tstsite/inc/functions-tasks.php",
-        data: data,
-        contentType: "application/json"
-    }).done(function() {
-        console.log('success');
+    $.post('http://polina.crisiscenter.ru/wp-admin/admin-ajax.php', {
+        action: 'external_add_task',
+        status: 'publish',
+        title: 'Новое дело',
+        descr: description
     });
 }
 

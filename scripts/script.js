@@ -3,6 +3,12 @@ $('.text-input').click(function(){
     $(this).addClass('active');
 });
 
+function valueChanged() {
+    if($('.info-check').is(":checked"))
+        $(".info").show();
+    else
+        $(".info").hide();
+}
 
 rangy.init();
 rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8

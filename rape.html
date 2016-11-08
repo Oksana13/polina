@@ -13,7 +13,14 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 header">
-                <h3>Вы можете заполнить, сохранить и распечатать заявление о преступлении для самостоятельной подачи или для перенаправления юристам Кризисного Центра</h3>
+                <h3>Вы можете заполнить, сохранить и распечатать заявление о преступлении для самостоятельной подачи или для перенаправления юристам.
+                    <h4>
+                        *Обращаем Ваше внимание на то, что Ваши персональные данные не сохраняются.
+                    </h4>
+
+                    <h4>Настоятельно рекомендуем Вам направлять заявление для дальнейшей проверки юристам.</h4>
+
+                </h3>
             </div>
         </div>
     </div>
@@ -87,17 +94,111 @@
         </div>
     </div>
 
-    <div class="row buffer">
-        <div class="col-sm-3">
+    <div class="row buffer buttons">
+        <div class="col-md-3">
             <a onClick="window.print()" class="btn btn-primary">Распечатать заявление</a>
         </div>
-        <div class="col-sm-3">
+        <div class="col-md-3">
             <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
         </div>
-        <div class="col-sm-3">
-            <!--<a onClick="send()" class="btn btn-primary pull-left">Отправить заявление юристам</a>-->
+        <div class="col-md-3">
+            <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
+            <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
+            </label>
+            <form class="info">
+                <input type="text" id="name" class="form-control" placeholder="Имя" required>
+                <input type="text" id="email" class="form-control" placeholder="Email" required>
+                <select name="region" class="form-control" id="region" required>
+                    <option value="RU-AD">Республика Адыгея</option>
+                    <option value="RU-AL">Республика Алтай </option>
+                    <option value="RU-BA">Республика Башкортостан </option>
+                    <option value="RU-BU">Республика Бурятия </option>
+                    <option value="RU-DA">Республика Дагестан </option>
+                    <option value="RU-IN">Республика Ингушетия </option>
+                    <option value="RU-KB">Кабардино-Балкарская республика </option>
+                    <option value="RU-KL">Республика Калмыкия </option>
+                    <option value="RU-KC">Карачаево-Черкесская республика </option>
+                    <option value="RU-KR">Республика Карелия </option>
+                    <option value="RU-KO">Республика Коми </option>
+                    <option value="RU-CR">Республика Крым </option>
+                    <option value="RU-ME">Республика Марий Эл </option>
+                    <option value="RU-MO">Республика Мордовия </option>
+                    <option value="RU-SA">Республика Саха (Якутия) </option>
+                    <option value="RU-SE">Республика Северная Осетия — Алания </option>
+                    <option value="RU-TA">Республика Татарстан </option>
+                    <option value="RU-TY">Республика Тыва </option>
+                    <option value="RU-UD">Удмуртская республика </option>
+                    <option value="RU-KK">Республика Хакасия </option>
+                    <option value="RU-CE">Чеченская республика </option>
+                    <option value="RU-CU">Чувашская республика </option>
+                    <option value="RU-ALT">Алтайский край </option>
+                    <option value="RU-ZAB">Забайкальский край </option>
+                    <option value="RU-KAM">Камчатский край </option>
+                    <option value="RU-KDA">Краснодарский край </option>
+                    <option value="RU-KYA">Красноярский край </option>
+                    <option value="RU-PER">Пермский край </option>
+                    <option value="RU-PRI">Приморский край </option>
+                    <option value="RU-STA">Ставропольский край </option>
+                    <option value="RU-KHA">Хабаровский край </option>
+                    <option value="RU-AMU">Амурская область </option>
+                    <option value="RU-ARK">Архангельская область </option>
+                    <option value="RU-AST">Астраханская область </option>
+                    <option value="RU-BEL">Белгородская область </option>
+                    <option value="RU-BRY">Брянская область </option>
+                    <option value="RU-VLA">Владимирская область </option>
+                    <option value="RU-VGG">Волгоградская область </option>
+                    <option value="RU-VLG">Вологодская область </option>
+                    <option value="RU-VOR">Воронежская область </option>
+                    <option value="RU-IVA">Ивановская область </option>
+                    <option value="RU-IRK">Иркутская область </option>
+                    <option value="RU-KGD">Калининградская область </option>
+                    <option value="RU-KLU">Калужская область </option>
+                    <option value="RU-KEM">Кемеровская область </option>
+                    <option value="RU-KIR">Кировская область </option>
+                    <option value="RU-KOS">Костромская область </option>
+                    <option value="RU-KGN">Курганская область </option>
+                    <option value="RU-KRS">Курская область </option>
+                    <option value="RU-LEN">Ленинградская область </option>
+                    <option value="RU-LIP">Липецкая область </option>
+                    <option value="RU-MAG">Магаданская область </option>
+                    <option value="RU-MOS">Московская область </option>
+                    <option value="RU-MUR">Мурманская область </option>
+                    <option value="RU-NIZ">Нижегородская область </option>
+                    <option value="RU-NGR">Новгородская область </option>
+                    <option value="RU-NVS">Новосибирская область </option>
+                    <option value="RU-OMS">Омская область </option>
+                    <option value="RU-ORE">Оренбургская область </option>
+                    <option value="RU-ORL">Орловская область </option>
+                    <option value="RU-PNZ">Пензенская область </option>
+                    <option value="RU-PSK">Псковская область </option>
+                    <option value="RU-ROS">Ростовская область </option>
+                    <option value="RU-RYA">Рязанская область </option>
+                    <option value="RU-SAM">Самарская область </option>
+                    <option value="RU-SAR">Саратовская область </option>
+                    <option value="RU-SAK">Сахалинская область </option>
+                    <option value="RU-SVE">Свердловская область </option>
+                    <option value="RU-SMO">Смоленская область </option>
+                    <option value="RU-TAM">Тамбовская область </option>
+                    <option value="RU-TVE">Тверская область </option>
+                    <option value="RU-TOM">Томская область </option>
+                    <option value="RU-TUL">Тульская область </option>
+                    <option value="RU-TYU">Тюменская область </option>
+                    <option value="RU-ULY">Ульяновская область </option>
+                    <option value="RU-CHE">Челябинская область </option>
+                    <option value="RU-YAR">Ярославская область </option>
+                    <option value="RU-MOW">Москва </option>
+                    <option value="RU-SPB">Санкт-Петербург </option>
+                    <option value="RU-SEV">Севастополь </option>
+                    <option value="RU-YEV">Еврейская автономная область </option>
+                    <option value="RU-NEN">Ненецкий автономный округ </option>
+                    <option value="RU-KHM">Ханты-Мансийский автономный округ - Югра </option>
+                    <option value="RU-CHU">Чукотский автономный округ </option>
+                    Добавлено через
+                </select>
+                <input type="submit" onclick="send()" class="btn btn-primary pull-left" value="Отправить заявление юристам"></input>
+            </form>
         </div>
-        <div class="col-sm-12 buffer"></div>
+        <div class="col-md-12 buffer"></div>
     </div>
 
 </div>
