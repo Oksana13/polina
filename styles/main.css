@@ -78,7 +78,7 @@ section {
 .check {
   font-weight: normal;
   width: 86%;
-  vertical-align: top;
+  vertical-align: bottom;
   margin-left: 10px;
 }
 .info {
@@ -91,6 +91,16 @@ section {
 }
 .buttons > div {
   margin-top: 15px;
+}
+.polina {
+  padding: 40px 0 30px;
+}
+.polina form .form-control {
+  width: auto;
+}
+.polina form input,
+.polina form select {
+  margin-right: 10px;
 }
 .application-header {
   width: 61%;
