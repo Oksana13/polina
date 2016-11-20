@@ -178,7 +178,7 @@
                             <option value="RU-CHU">Чукотский автономный округ </option>
                             Добавлено через
                         </select>
-                        <input  type="submit"  class="btn btn-primary col-sm-2" value="Отправить"></input>
+                        <a id="send" type="submit"  class="btn btn-primary col-sm-2">Отправить</a>
                     </form>
                 </div>
             </div>
@@ -190,6 +190,20 @@
                 <div class="col-sm-3 col-md-2">
                     <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
                 </div>
+            </div>
+
+            <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                Ваше заявление отправленно на проверку юристам
+            </div>
+
+            <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                Что-то пошло не так, попробуйте отправить еще раз
             </div>
 
         </div>

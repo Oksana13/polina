@@ -4,11 +4,14 @@ $('.text-input').click(function(){
 });
 
 function valueChanged() {
-    if($('.info-check').is(":checked"))
-        $(".info").show();
-    else
-        $(".info").hide();
+    ($('.info-check').is(":checked")) ? $(".info").show() : $(".info").hide();
 }
+
+
+$('#send').click(function (e) {
+    e.preventDefault();
+});
+
 
 rangy.init();
 rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8

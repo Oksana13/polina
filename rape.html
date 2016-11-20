@@ -190,7 +190,7 @@
                     <option value="RU-CHU">Чукотский автономный округ </option>
                     Добавлено через
                 </select>
-                <input  type="submit"  class="btn btn-primary col-sm-2" value="Отправить"></input>
+                <a id="send" type="submit"  class="btn btn-primary col-sm-2">Отправить</a>
             </form>
         </div>
     </div>
@@ -204,6 +204,20 @@
         </div>
     </div>
 
+    <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Ваше заявление отправленно на проверку юристам
+    </div>
+
+    <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Что-то пошло не так, попробуйте отправить еще раз
+    </div>
+
 </div>
 <script src="bower_components/jquery-1.12.4.min/index.js"></script>
 <script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
@@ -214,7 +228,7 @@
 <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
 <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
 <script src="scripts/rape.to.pdf.js "></script>
-<script src="scripts/to.polina.js "></script>
 <script src="scripts/script.js "></script>
+<script src="scripts/to.polina.js "></script>
 </body>
 </html>
