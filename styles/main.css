@@ -24,6 +24,11 @@ header h3 {
 .content {
   padding: 0 20px 0 70px;
 }
+@media (max-width: 500px) {
+  .content {
+    padding: 0 0 0 50px;
+  }
+}
 .buffer {
   padding-top: 40px;
 }
@@ -126,6 +131,11 @@ section {
 @media (max-width: 900px) {
   .application-header td:nth-child(2) {
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .application-header #header {
+    padding-right: 20px;
   }
 }
 @media only print {
