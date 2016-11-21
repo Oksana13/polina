@@ -93,21 +93,15 @@
         </div>
     </div>
 
-    <div class="row buffer buttons">
-        <div class="col-md-3">
-            <a onClick="window.print()" class="btn btn-primary">Распечатать заявление</a>
-        </div>
-        <div class="col-md-3">
-            <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
-        </div>
-        <div class="col-md-3">
+    <div class="row polina">
+        <div class="col-md-12">
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
             <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
             </label>
-            <form class="info" onsubmit="send()">
-                <input type="text" id="name"  class="form-control" placeholder="Имя" required>
-                <input type="text" id="email" class="form-control" placeholder="Email" required>
-                <select name="region" class="form-control" id="region" required>
+            <form class="info">
+                <input  type="text" id="name" class="form-control col-sm-2" placeholder="Имя" required>
+                <input  type="text" id="email" class="form-control col-sm-2" placeholder="Email" required>
+                <select  name="region" class="form-control col-sm-2" id="region" required>
                     <option value="RU-AD">Республика Адыгея</option>
                     <option value="RU-AL">Республика Алтай </option>
                     <option value="RU-BA">Республика Башкортостан </option>
@@ -194,9 +188,32 @@
                     <option value="RU-CHU">Чукотский автономный округ </option>
                     Добавлено через
                 </select>
-                <input type="submit"  class="btn btn-primary pull-left" value="Отправить заявление юристам"></input>
+                <button id="send" type="submit"  class="btn btn-primary col-sm-2">Отправить</button>
             </form>
         </div>
+    </div>
+
+    <div class="row buttons">
+        <div class="col-sm-3 col-md-2">
+            <a onClick="window.print()" class="btn btn-primary">Распечатать заявление</a>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
+        </div>
+    </div>
+
+    <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Ваше заявление отправленно на проверку юристам
+    </div>
+
+    <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Что-то пошло не так, попробуйте отправить еще раз
     </div>
 
 </div>

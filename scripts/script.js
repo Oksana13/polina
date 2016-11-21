@@ -8,10 +8,6 @@ function valueChanged() {
 }
 
 
-$('#send').click(function (e) {
-    e.preventDefault();
-});
-
 
 rangy.init();
 rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8
