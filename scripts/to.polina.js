@@ -1,12 +1,17 @@
 $('#send').click(function (e){
     var name = $('#name').val(),
-        email = $('#email').val(),
-        app = $('#editable').text(),
-        description = app + '<br><br>' + name + '<br>' + email;
+        email = $('#email').val();
 
-
-    if( name.length >= 1 && email.length >= 1 ) {
+    if( name.length >= 2 && email.length >= 5 ) {
         $('form.info').submit(function (e) {
+            var app,
+                description;
+
+            $('.remove').text('');
+
+            app = $('#editable').text();
+            description = app + '<br><br>' + name + '<br>' + email;
+
             $.post(
                 'http://polina.crisiscenter.ru/wp-admin/admin-ajax.php',
                 {
