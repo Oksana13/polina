@@ -37,7 +37,7 @@
                         <td width="60%">
                             <p id="header">В <span class="text-input text-xs"></span> отдел полиции <span class="text-input text-xs"></span>
                                 <br>
-                                <span class="text-input"></span> (указать населенный пункт)<br>
+                                <span class="text-input"></span> <i class="remove not-printable">(указать населенный пункт)</i><br>
                                 ФИО <span class="text-input"></span> <br>
                                 дата рождения <span class="text-input"></span> <br>
                                 паспорт <span class="text-input"></span> <br>
@@ -63,18 +63,18 @@
 
                     <p class="buffer" id="date">Дата и время события: <span class="text-input"></span></p>
 
-                    <p id="text1">Место совершения преступления (подробно): <br>
+                    <p id="text1">Место совершения преступления <i class="remove not-printable">(подробно)</i>: <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text2"><span class="text-input"></span> (ФИО) угрожал мне убийством (или причинением вреда здоровью, указать какого вреда)  при следующих обстоятельствах: </p>
+                    <p id="text2"><span class="text-input"></span> <i class="remove not-printable"><i class="remove not-printable">(ФИО)</i></i> угрожал мне убийством <i class="remove not-printable">(или причинением вреда здоровью, указать какого вреда)</i>  при следующих обстоятельствах: </p>
 
                     <p id="text3"><span class="text-input text-xl"></span> <br>
-                        (указать как высказывались угрозы, применял ли насильнико во время угроз физическую силу, наносил ли удары, были ли в его руках оружие иные предметы, сопособные причинить вред и т.д.)
+                        <i class="remove not-printable">(указать как высказывались угрозы, применял ли насильнико во время угроз физическую силу, наносил ли удары, были ли в его руках оружие иные предметы, сопособные причинить вред и т.д.)</i>
                     </p>
 
                     <p id="text4">Угроза была высказана в следующей форме: <span class="text-input"></span> <br>
-                        (подробно описать: процитировать слова или описать жесты и иные формы выражения угрозы).
+                        <i class="remove not-printable">(подробно описать: процитировать слова или описать жесты и иные формы выражения угрозы).</i>
                     </p>
 
                     <p id="text5">Подтвердить то, что он угрожал мне убийством, могут следующие свидетели: <br>
@@ -82,13 +82,13 @@
                         2. ФИО, адрес, телефон <span class="text-input"></span>
                     </p>
 
-                    <p id="text6">Угрозу убийством <span class="text-input"></span> (ФИО) убийством я воспринимаю как реальную, так как у меня имеются основания опасаться осуществления этой угрозы, а именно:
+                    <p id="text6">Угрозу убийством <span class="text-input"></span> <i class="remove not-printable">(ФИО)</i> убийством я воспринимаю как реальную, так как у меня имеются основания опасаться осуществления этой угрозы, а именно:
                         <br>
                         <span class="text-input text-xl"></span> <br>
-                        <small class="not-printable text-center">(указать обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное поведение; подвергалась ли потерпевшая или кто-либо еще оскорблениям, унижениям, побоям со стороны лица, совершившего преступление; был ли судим,  были ли вызовы полиции, результат; иные сведения характеризующие личность лица, в отношении которого подается заявление, дающие полагать, что он способен выполнить свои угрозы).</small>
+                        <small class="not-printable text-center"><i class="remove not-printable">(указать обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное поведение; подвергалась ли потерпевшая или кто-либо еще оскорблениям, унижениям, побоям со стороны лица, совершившего преступление; был ли судим,  были ли вызовы полиции, результат; иные сведения характеризующие личность лица, в отношении которого подается заявление, дающие полагать, что он способен выполнить свои угрозы).</i></small>
                     </p>
 
-                    <p id="text7">В связи с вышеизложенным в целях защиты моих здоровья и жизни и членов моей семьи, а также для предотвращения возможных иных преступлений против меня прошу принять меры по наказанию <span class="text-input"></span> (ФИО) в уголовном порядке.
+                    <p id="text7">В связи с вышеизложенным в целях защиты моих здоровья и жизни и членов моей семьи, а также для предотвращения возможных иных преступлений против меня прошу принять меры по наказанию <span class="text-input"></span> <i class="remove not-printable">(ФИО)</i> в уголовном порядке.
                     </p>
 
                     <p id="text8">Мне известно об уголовной ответственности за заведомо ложный донос, предусмотренный в соответствии со ст.306 Уголовного кодекса Российской Федерации.
@@ -105,7 +105,7 @@
         </div>
     </div>
 
-    <div class="row polina">
+    <div class="row polina not-printable">
         <div class="col-md-12">
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
             <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
@@ -214,18 +214,25 @@
         </div>
     </div>
 
-    <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="success" class="alert alert-success" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Ваше заявление отправленно на проверку юристам
     </div>
 
-    <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="error" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Что-то пошло не так, попробуйте отправить еще раз
+    </div>
+
+    <div id="fields" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Пожалуйста, заполните все поля формы
     </div>
 
 </div>

@@ -35,7 +35,7 @@
                         <td width="40%"></td>
                         <td width="60%">
                             <p id="header">В <span class="text-input text-xs"></span> отдел полиции <span class="text-input text-xs"></span>
-                                <br><span class="text-input"></span> (указать населенный пункт)<br>
+                                <br><span class="text-input"></span> <i class="remove not-printable">(указать населенный пункт)</i><br>
                                 ФИО <span class="text-input"></span> <br>
                                 дата рождения <span class="text-input"></span> <br>
                                 паспорт <span class="text-input"></span> <br>
@@ -59,19 +59,19 @@
                     <p class="text-center">в соответствии с ФЗ «О государственной защите потерпевших, свидетелей и иных участников уголовного судопроизводства» от 20.08.2004 № 119-ФЗ
                     </p>
 
-                    <p id="text1" class="buffer">Я, <span class="text-input"></span> (ФИО) , на протяжении нескольких лет подвергаюсь систематическому насилию в семье со стороны <span class="text-input"></span> (ФИО обидчика).
+                    <p id="text1" class="buffer">Я, <span class="text-input"></span> <i class="remove not-printable">(ФИО)</i> , на протяжении нескольких лет подвергаюсь систематическому насилию в семье со стороны <span class="text-input"></span> <i class="remove not-printable">(ФИО обидчика)</i>.
                     </p>
 
-                    <p id="text2">Свидетелями и жертвами жестокого обращения с его стороны также неоднократно становились мои близкие – <span class="text-input"></span> (ФИО, перечислить).</p>
+                    <p id="text2">Свидетелями и жертвами жестокого обращения с его стороны также неоднократно становились мои близкие – <span class="text-input"></span> <i class="remove not-printable">(ФИО, перечислить)</i>.</p>
 
-                    <p id="text3">В настоящее время в <span class="text-input text-xs"></span> отделе полиции г. <span class="text-input"></span>проводится проверка по моему заявлению о возбуждении уголовного дела в отношении <span class="text-input"></span> (ФИО) по факту угрозы убийством и (или угрозы причинения тяжкого вреда здоровью).
+                    <p id="text3">В настоящее время в <span class="text-input text-xs"></span> отделе полиции г. <span class="text-input"></span>проводится проверка по моему заявлению о возбуждении уголовного дела в отношении <span class="text-input"></span> <i class="remove not-printable">(ФИО)</i> по факту угрозы убийством и <i class="remove not-printable">(или угрозы причинения тяжкого вреда здоровью)</i>.
                     </p>
 
-                    <p id="text4">Несмотря на мое обращение в полицию, <span class="text-input"></span> (ФИО обидчика), он продолжает преследовать меня и моих близких, продолжает мне угрожать, а именно (описать то, что происходит, как преследует обидчик, указать свидетелей, если они есть):<br>
+                    <p id="text4">Несмотря на мое обращение в полицию, <span class="text-input"></span> <i class="remove not-printable">(ФИО обидчика)</i>, он продолжает преследовать меня и моих близких, продолжает мне угрожать, а именно <i class="remove not-printable">(описать то, что происходит, как преследует обидчик, указать свидетелей, если они есть)</i>:<br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text5">Я полагаю, что все указанные события представляют собой продолжающееся физическое и психическое насилие в отношении меня. Я воспринимаю озвученные  <span class="text-input"></span> (ФИО обидчика) угрозы реально. Поведение <span class="text-input"></span> (ФИО обидчика)  абсолютно непредсказуемо, его настроение и состояние нестабильны и могут меняться многократно в течение дня. Я живу в постоянном страхе за свою жизнь и здоровье, а также за своих близких. Я опасаюсь, что от своих угроз <span class="text-input"></span> (ФИО обидчика)  перейдет к прямым действиям. В связи с этим я вынуждена скрываться. Но самостоятельно я не могу в обеспечить свою безопасность.
+                    <p id="text5">Я полагаю, что все указанные события представляют собой продолжающееся физическое и психическое насилие в отношении меня. Я воспринимаю озвученные  <span class="text-input"></span> <i class="remove not-printable">(ФИО обидчика)</i> угрозы реально. Поведение <span class="text-input"></span> <i class="remove not-printable">(ФИО обидчика)</i>  абсолютно непредсказуемо, его настроение и состояние нестабильны и могут меняться многократно в течение дня. Я живу в постоянном страхе за свою жизнь и здоровье, а также за своих близких. Я опасаюсь, что от своих угроз <span class="text-input"></span> <i class="remove not-printable">(ФИО обидчика)</i>  перейдет к прямым действиям. В связи с этим я вынуждена скрываться. Но самостоятельно я не могу в обеспечить свою безопасность.
                         <br>
                         <i>(Если у обидчика есть оружие, написать об этом).</i>
                     </p>
@@ -93,7 +93,7 @@
         </div>
     </div>
 
-    <div class="row polina">
+    <div class="row polina not-printable">
         <div class="col-md-12">
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
             <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
@@ -202,18 +202,25 @@
         </div>
     </div>
 
-    <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="success" class="alert alert-success" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Ваше заявление отправленно на проверку юристам
     </div>
 
-    <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="error" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Что-то пошло не так, попробуйте отправить еще раз
+    </div>
+
+    <div id="fields" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Пожалуйста, заполните все поля формы
     </div>
 
 </div>

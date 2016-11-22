@@ -58,45 +58,45 @@
 
                     <p class="buffer" id="date">Дата, время события, ФИО обидчика: <span class="text-input"></span></p>
 
-                    <p id="text1">Место совершения преступления (подробно): <br>
+                    <p id="text1">Место совершения преступления <i class="remove not-printable">(подробно)</i>: <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text2">Описание события преступления (подробно как наносились удары, в какую часть тела, чем или
+                    <p id="text2">Описание события преступления <i class="remove not-printable">(подробно как наносились удары, в какую часть тела, чем или
                         какой частью тела, сколько ударов, сколько времени продолжались насильственные действия
-                        (избиение): <br>
+                        (избиение))</i>: <br>
                         <span id="description" class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text4">Указать была ли проведена фотосъемка телесных повреждений (где, когда, с помощью каких
-                        технических средств, в присутствии каких свидетелей) <br>
+                    <p id="text4">Указать была ли проведена фотосъемка телесных повреждений <i class="remove not-printable">(где, когда, с помощью каких
+                        технических средств, в присутствии каких свидетелей)</i> <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text5">Указать свидетелей, если они были (ФИО, где находились в момент совершения преступления, что
-                        видели, слышали, что могут подтвердить): <br>
+                    <p id="text5">Указать свидетелей, если они были <i class="remove not-printable">(ФИО, где находились в момент совершения преступления, что
+                        видели, слышали, что могут подтвердить)</i>: <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text6">Дата, время обращения в медицинское учреждение, если было такое обращение (наименование
+                    <p id="text6">Дата, время обращения в медицинское учреждение, если было такое обращение <i class="remove not-printable">(наименование
                         медицинского учреждения, адрес дата и время обращения, описание телесных повреждений
-                        зафиксированных врачом, диагноз, кратко описать дальнейшее лечение, если было) <br>
+                        зафиксированных врачом, диагноз, кратко описать дальнейшее лечение, если было)</i> <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text7">Обстоятельства характеризующие лицо, совершившее преступление (было ли ранее агрессивное
+                    <p id="text7">Обстоятельства характеризующие лицо, совершившее преступление <i class="remove not-printable">(было ли ранее агрессивное
                         поведение; подвергалась ли потерпевшая или кто-либо еще оскорблениям, унижениям, побоям со
                         стороны лица, совершившего преступление; был ли судим, были ли вызовы полиции, результат;
-                        иные сведения характеризующие личность лица, в отношении которого подается заявление): <br>
+                        иные сведения характеризующие личность лица, в отношении которого подается заявление)</i>: <br>
                         <span class="text-input text-xl"></span>
                     </p>
 
-                    <p id="text9">В связи с неправомерными действиями <span class="text-input"></span> (ФИО
-                        лица совершившего преступление) характеризуются виной в форме прямого умысла, поскольку он:
+                    <p id="text9">В связи с неправомерными действиями <span class="text-input"></span> <i class="remove not-printable">(ФИО
+                        лица совершившего преступление)</i> характеризуются виной в форме прямого умысла, поскольку он:
                         <br>
                         - осознавал общественно опасный характер своих действий - покушение на мое здоровье. На это
-                        указывает способ совершения преступления (<span class="text-input"></span>
-                        (указать каким образом наносились побои).
+                        указывает способ совершения преступления <span class="text-input"></span>
+                        <i class="remove not-printable">(указать каким образом наносились побои)</i>.
                         <br>
                         - предвидел возможность и неизбежность наступления общественно опасных последствий –
                         причинение вреда здоровью.
@@ -109,7 +109,7 @@
                     <p id="text11">На основании изложенного, прошу:
                     </p>
 
-                    <p id="text12">1. Возбудить уголовное дело в отношении (указать известные данные):
+                    <p id="text12">1. Возбудить уголовное дело в отношении <i class="remove not-printable">(указать известные данные)</i>:
                     </p>
 
                     <p id="text13">ФИО <span class="text-input"></span> <br>
@@ -148,7 +148,7 @@
         </div>
     </div>
 
-    <div class="row polina">
+    <div class="row polina not-printable">
         <div class="col-md-12">
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
             <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
@@ -257,18 +257,25 @@
         </div>
     </div>
 
-    <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="success" class="alert alert-success" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Ваше заявление отправленно на проверку юристам
     </div>
 
-    <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <div id="error" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
             <span aria-hidden="true">×</span>
         </button>
         Что-то пошло не так, попробуйте отправить еще раз
+    </div>
+
+    <div id="fields" class="alert alert-warning" role="alert">
+        <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+        Пожалуйста, заполните все поля формы
     </div>
 
 </div>

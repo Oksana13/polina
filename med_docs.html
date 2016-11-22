@@ -36,10 +36,10 @@
                                <td width="40%"></td>
                                <td width="60%">
                                    <p id="header">В <span class="text-input"></span> <br>
-                                       (наименование медицинского учреждения)
+                                       <i class="remove not-printable">(наименование медицинского учреждения)</i>
                                        <br>
                                        <span class="text-input"></span> <br>
-                                       (адрес медицинского учреждения)
+                                       <i class="remove not-printable">(адрес медицинского учреждения)</i>
                                        <br>
                                        от ФИО <span class="text-input"></span> <br>
                                        дата рождения <span class="text-input"></span> <br>
@@ -62,14 +62,14 @@
                             <h4 class="text-center p"><strong>о предоставлении копий медицинских документов</strong></h4>
 
 
-                    <p class="buffer" id="date">Я, <span class="text-input"></span>(ФИО)
-                        <span class="text-input"></span>г. (указать дату) обратилась за медицинской помощью в <span class="text-input"></span> (указать наименование медицинского учреждения).</p>
+                    <p class="buffer" id="date">Я, <span class="text-input"></span><i class="remove not-printable">(ФИО)</i>
+                        <span class="text-input"></span>г. <i class="remove not-printable">(указать дату)</i> обратилась за медицинской помощью в <span class="text-input"></span> <i class="remove not-printable">(указать наименование медицинского учреждения)</i>.</p>
 
                     <p id="text1">В соответствии со ст.22 Федерального закона от 21.11.2011 №323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации". каждый имеет право получить в доступной для него форме имеющуюся в медицинской организации информацию о состоянии своего здоровья, в том числе сведения о результатах медицинского обследования, наличии заболевания, об установленном диагнозе и о прогнозе развития заболевания, методах оказания медицинской помощи, связанном с ними риске, возможных видах медицинского вмешательства, его последствиях и результатах оказания медицинской помощи.</p>
                     <p id="text2">Пациент либо его законный представитель имеет право непосредственно знакомиться с медицинской документацией, отражающей состояние его здоровья, в порядке, установленном уполномоченным федеральным органом исполнительной власти, и получать на основании такой документации консультации у других специалистов.</p>
                     <p id="text3">Пациент либо его законный представитель имеет право на основании письменного заявления получать отражающие состояние здоровья медицинские документы, их копии и выписки из медицинских документов.</p>
 
-                    <p id="text4">На основании вышеизложенного прошу в пятидневный срок предоставить копию медицинской карты <span class="text-input"></span> (ФИО),<span class="text-input"></span> г.р., заверенную надлежащим образом.</p>
+                    <p id="text4">На основании вышеизложенного прошу в пятидневный срок предоставить копию медицинской карты <span class="text-input"></span> <i class="remove not-printable">(ФИО)</i>,<span class="text-input"></span> г.р., заверенную надлежащим образом.</p>
                     <p>О готовности копий медицинских документов прошу сообщить по телефону <span class="text-input"></span> для получения документов на руки (лично).</p>
 
                         <div class="row">
@@ -83,7 +83,7 @@
               </div>
             </div>
 
-            <div class="row polina">
+            <div class="row polina not-printable">
                 <div class="col-md-12">
                     <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
                     <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
@@ -192,18 +192,25 @@
                 </div>
             </div>
 
-            <div id="success" class="alert alert-success alert-dismissible fade in" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <div id="success" class="alert alert-success" role="alert">
+                <button type="button" class="close"  aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
                 Ваше заявление отправленно на проверку юристам
             </div>
 
-            <div id="error" class="alert alert-warning alert-dismissible fade in" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <div id="error" class="alert alert-warning" role="alert">
+                <button type="button" class="close"  aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
                 Что-то пошло не так, попробуйте отправить еще раз
+            </div>
+
+            <div id="fields" class="alert alert-warning" role="alert">
+                <button type="button" class="close"  aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                Пожалуйста, заполните все поля формы
             </div>
 
         </div>
