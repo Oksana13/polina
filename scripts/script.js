@@ -7,7 +7,7 @@ function valueChanged() {
     ($('.info-check').is(":checked")) ? $(".info").show() : $(".info").hide();
 }
 
-
+$('[data-toggle="tooltip"]').tooltip()
 
 rangy.init();
 rangy.createMissingNativeApi(); // to polyfill window.getSelection() in IE8

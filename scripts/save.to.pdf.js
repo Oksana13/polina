@@ -207,11 +207,6 @@ function CreateHeaderDiv() {
     return p;
 }
 
-function addSpace() {
-    var space = {text:["                                          "]};
-    return space;
-}
-
 function downloadPdf () {
 
     var applicationText = document.getElementById('application').innerHTML;

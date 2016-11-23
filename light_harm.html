@@ -151,9 +151,9 @@
     </div>
 
     <div class="row polina not-printable">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" onchange="valueChanged()"/>
-            <label for="info-check" class="check">Отправить заявление на проверку юристам Кризисного Центра
+            <label for="info-check" class="check" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить заявление на проверку юристам Кризисного Центра
             </label>
             <form class="info">
                 <input  type="text" id="name" class="form-control col-sm-2" placeholder="Имя" required>
@@ -245,17 +245,20 @@
                     <option value="RU-CHU">Чукотский автономный округ </option>
                     Добавлено через
                 </select>
-                <button id="send" type="submit"  class="btn btn-primary col-sm-2">Отправить</button>
+                <button id="send" type="submit"  class="btn btn-primary col-sm-2" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить</button>
             </form>
         </div>
     </div>
 
     <div class="row buttons">
-        <div class="col-sm-3 col-md-2">
-            <a onClick="window.print()" class="btn btn-primary">Распечатать заявление</a>
+        <div class="col-sm-3">
+            <a onClick="window.print()" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Распечатайте заявление из браузера или сохраните его в pdf">Распечатать заявление</a>
         </div>
-        <div class="col-sm-3 col-md-2">
-            <a href="javascript:downloadPdf()" class="btn btn-primary">Скачать заявление в PDF</a>
+        <div class="col-sm-3">
+            <a href="javascript:downloadPdf()" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Скачайте заявление в формате pdf">Скачать заявление в PDF</a>
+        </div>
+        <div class="col-sm-3">
+            <a id="download-rtf" class="btn btn-primary"  data-toggle="tooltip" data-placement="top" title="Текстовый формат, который можно редактировать в любом текстовом редакторе, например в Word">Скачать заявление в RTF</a>
         </div>
     </div>
 
@@ -289,7 +292,9 @@
 <script src="scripts/etch.js"></script>
 <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
 <script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
-<script src="scripts/poboi.to.pdf.js "></script>
+<script src="bower_components/file-saver/FileSaver.min.js"></script>
+<script src="scripts/to.rtf.js"></script>
+<script src="scripts/med.docs.to.pdf.js"></script>
 <script src="scripts/to.polina.js "></script>
 <script src="scripts/script.js "></script>
 </body>
