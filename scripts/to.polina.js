@@ -1,6 +1,7 @@
 $('#send').click(function (e){
     var name = $('#name').val(),
-        email = $('#email').val();
+        email = $('#email').val(),
+        appLayout = $('#application').html();
 
     if( name.length >= 2 && email.length >= 5 ) {
         $('form.info').submit(function (e) {
@@ -8,9 +9,11 @@ $('#send').click(function (e){
                 description;
 
             $('.remove').text('');
+            $('.personal-data').text('Personal Data');
 
-            app = $('#editable').text();
-            description = app + '<br><br>' + name + '<br>' + email;
+
+            app = $('#editable').html();
+            description = app + '\n\n' + 'Имя: ' + name + '\n Email: ' + email;
 
             $.post(
                 'http://polina.crisiscenter.ru/wp-admin/admin-ajax.php',
@@ -22,6 +25,8 @@ $('#send').click(function (e){
                 })
                 .success(onAjaxSuccess)
                 .error(onAjaxError);
+
+            $('#application').html(appLayout);
 
             e.preventDefault();
 
