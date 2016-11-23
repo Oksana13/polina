@@ -13,7 +13,7 @@ $('#send').click(function (e){
 
 
             app = $('#editable').html();
-            description = app + '\n\n' + 'Имя: ' + name + '\n Email: ' + email;
+            description = app + '\n<br>\n<br>\n' + 'Имя: ' + name + '\n Email: ' + email;
 
             $.post(
                 'http://polina.crisiscenter.ru/wp-admin/admin-ajax.php',
