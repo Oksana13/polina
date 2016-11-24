@@ -86,9 +86,6 @@ section {
   width: 86%;
   margin-left: 10px;
 }
-.info {
-  display: none;
-}
 .info input,
 .info select,
 .info button {
