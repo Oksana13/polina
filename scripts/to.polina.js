@@ -1,6 +1,7 @@
 $('#send').click(function (e){
     var name = $('#name').val(),
         email = $('#email').val(),
+        type = $('#type').text();
         appLayout = $('#application').html();
 
     if( name.length >= 2 && email.length >= 5 ) {
@@ -9,18 +10,19 @@ $('#send').click(function (e){
                 description;
 
             $('.remove').text('');
-            $('.personal-data').text('Personal Data');
+            $('.personal-data').text('{ Персональные данные удалены }');
 
 
             app = $('#editable').html();
             description = app + '\n<br>\n<br>\n' + 'Имя: ' + name + '\n Email: ' + email;
+            name = $('#name').val();
 
             $.post(
                 'http://polina.crisiscenter.ru/wp-admin/admin-ajax.php',
                 {
                     action: 'external_add_task',
                     status: 'publish',
-                    title: 'Новое дело',
+                    title: 'Новое дело (' + type + ' ) - ' + name,
                     descr: description
                 })
                 .success(onAjaxSuccess)

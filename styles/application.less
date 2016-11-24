@@ -1,6 +1,7 @@
 body {
     background: #eee;
-    padding-bottom: 150px;
+    padding-bottom: 240px;
+    position: relative;
 }
 
 .article {
@@ -130,13 +131,18 @@ section {
 }
 
 .btn-primary {
-  background-color: #582368;
-  border-color: #742f8a;
+  background-color: #742f8a;
+  border-color: #582368;
 
   &:hover {
-    background-color: #742f8a;
-    border-color: #582368;
+    background-color: #582368;
+    border-color: #742f8a;
   }
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+  background-color: #742f8a;
+  border-color: #582368;
 }
 
 .polina {
@@ -205,12 +211,12 @@ section {
 
 .alert {
     width: 100%;
-    height: 100px;
+    height: 150px;
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 33px;
+    padding-top: 60px;
     font-size: 22px;
     text-align: center;
 
@@ -221,4 +227,45 @@ section {
     span {
         font-size: 30px;
     }
+}
+
+footer {
+  background: #582368;
+  color: #eee;
+  padding: 30px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  text-align: center;
+
+  .teplica-logo {
+    display: inline-block;
+    vertical-align: inherit;
+    margin-left: 25px;
+
+    img {
+      height: 34px;
+      width: 210px;
+    }
+
+    @media (max-width: 512px) {
+      margin-top: 10px;
+    }
+  }
+
+  .cc-logo {
+    display: inline-block;
+    vertical-align: inherit;
+    img {
+      height: 45px;
+    }
+
+    @media (min-width: 512px) {
+      margin-top: 10px;
+    }
+  }
 }
