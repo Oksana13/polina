@@ -19,4 +19,4 @@
 
 ### Лицензия
 
-Смотрите фалй LICENSE for license rights and limitations (GNU).
+Смотрите файл LICENSE. Лицензия GNU.
