@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Polina</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/etch.css"/>
-    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/etch.css"/>
+    <link rel="stylesheet" href="../styles/main.css"/>
 </head>
 <body>
 <header class="not-printable">
@@ -193,107 +193,108 @@
         </div>
     </div>
 
-    <div class="row polina not-printable">
-        <div class="col-md-6">
-            <input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" checked onchange="valueChanged()"/>
-            <label for="info-check" class="check" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить заявление на проверку юристам Кризисного Центра
-            </label>
-            <form class="info">
-                <input  type="text" id="name" class="form-control col-sm-2" placeholder="Имя" required>
-                <input  type="text" id="email" class="form-control col-sm-2" placeholder="Email" required>
-                <select  name="region" class="form-control col-sm-2" id="region" required>
-                    <option value="RU-AD">Республика Адыгея</option>
-                    <option value="RU-AL">Республика Алтай </option>
-                    <option value="RU-BA">Республика Башкортостан </option>
-                    <option value="RU-BU">Республика Бурятия </option>
-                    <option value="RU-DA">Республика Дагестан </option>
-                    <option value="RU-IN">Республика Ингушетия </option>
-                    <option value="RU-KB">Кабардино-Балкарская республика </option>
-                    <option value="RU-KL">Республика Калмыкия </option>
-                    <option value="RU-KC">Карачаево-Черкесская республика </option>
-                    <option value="RU-KR">Республика Карелия </option>
-                    <option value="RU-KO">Республика Коми </option>
-                    <option value="RU-CR">Республика Крым </option>
-                    <option value="RU-ME">Республика Марий Эл </option>
-                    <option value="RU-MO">Республика Мордовия </option>
-                    <option value="RU-SA">Республика Саха (Якутия) </option>
-                    <option value="RU-SE">Республика Северная Осетия — Алания </option>
-                    <option value="RU-TA">Республика Татарстан </option>
-                    <option value="RU-TY">Республика Тыва </option>
-                    <option value="RU-UD">Удмуртская республика </option>
-                    <option value="RU-KK">Республика Хакасия </option>
-                    <option value="RU-CE">Чеченская республика </option>
-                    <option value="RU-CU">Чувашская республика </option>
-                    <option value="RU-ALT">Алтайский край </option>
-                    <option value="RU-ZAB">Забайкальский край </option>
-                    <option value="RU-KAM">Камчатский край </option>
-                    <option value="RU-KDA">Краснодарский край </option>
-                    <option value="RU-KYA">Красноярский край </option>
-                    <option value="RU-PER">Пермский край </option>
-                    <option value="RU-PRI">Приморский край </option>
-                    <option value="RU-STA">Ставропольский край </option>
-                    <option value="RU-KHA">Хабаровский край </option>
-                    <option value="RU-AMU">Амурская область </option>
-                    <option value="RU-ARK">Архангельская область </option>
-                    <option value="RU-AST">Астраханская область </option>
-                    <option value="RU-BEL">Белгородская область </option>
-                    <option value="RU-BRY">Брянская область </option>
-                    <option value="RU-VLA">Владимирская область </option>
-                    <option value="RU-VGG">Волгоградская область </option>
-                    <option value="RU-VLG">Вологодская область </option>
-                    <option value="RU-VOR">Воронежская область </option>
-                    <option value="RU-IVA">Ивановская область </option>
-                    <option value="RU-IRK">Иркутская область </option>
-                    <option value="RU-KGD">Калининградская область </option>
-                    <option value="RU-KLU">Калужская область </option>
-                    <option value="RU-KEM">Кемеровская область </option>
-                    <option value="RU-KIR">Кировская область </option>
-                    <option value="RU-KOS">Костромская область </option>
-                    <option value="RU-KGN">Курганская область </option>
-                    <option value="RU-KRS">Курская область </option>
-                    <option value="RU-LEN">Ленинградская область </option>
-                    <option value="RU-LIP">Липецкая область </option>
-                    <option value="RU-MAG">Магаданская область </option>
-                    <option value="RU-MOS">Московская область </option>
-                    <option value="RU-MUR">Мурманская область </option>
-                    <option value="RU-NIZ">Нижегородская область </option>
-                    <option value="RU-NGR">Новгородская область </option>
-                    <option value="RU-NVS">Новосибирская область </option>
-                    <option value="RU-OMS">Омская область </option>
-                    <option value="RU-ORE">Оренбургская область </option>
-                    <option value="RU-ORL">Орловская область </option>
-                    <option value="RU-PNZ">Пензенская область </option>
-                    <option value="RU-PSK">Псковская область </option>
-                    <option value="RU-ROS">Ростовская область </option>
-                    <option value="RU-RYA">Рязанская область </option>
-                    <option value="RU-SAM">Самарская область </option>
-                    <option value="RU-SAR">Саратовская область </option>
-                    <option value="RU-SAK">Сахалинская область </option>
-                    <option value="RU-SVE">Свердловская область </option>
-                    <option value="RU-SMO">Смоленская область </option>
-                    <option value="RU-TAM">Тамбовская область </option>
-                    <option value="RU-TVE">Тверская область </option>
-                    <option value="RU-TOM">Томская область </option>
-                    <option value="RU-TUL">Тульская область </option>
-                    <option value="RU-TYU">Тюменская область </option>
-                    <option value="RU-ULY">Ульяновская область </option>
-                    <option value="RU-CHE">Челябинская область </option>
-                    <option value="RU-YAR">Ярославская область </option>
-                    <option value="RU-MOW">Москва </option>
-                    <option value="RU-SPB">Санкт-Петербург </option>
-                    <option value="RU-SEV">Севастополь </option>
-                    <option value="RU-YEV">Еврейская автономная область </option>
-                    <option value="RU-NEN">Ненецкий автономный округ </option>
-                    <option value="RU-KHM">Ханты-Мансийский автономный округ - Югра </option>
-                    <option value="RU-CHU">Чукотский автономный округ </option>
-                    Добавлено через
-                </select>
-                <button id="send" type="submit"  class="btn btn-primary col-sm-2" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить</button>
-            </form>
-        </div>
-    </div>
+    <!--form for sending to P.O.L.I.N.A.-->
+    <!--<div class="row polina not-printable">-->
+        <!--<div class="col-md-6">-->
+            <!--<input class="info-check" type="checkbox" name="info-check" id="info-check" value="1" checked onchange="valueChanged()"/>-->
+            <!--<label for="info-check" class="check" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить заявление на проверку юристам Кризисного Центра-->
+            <!--</label>-->
+            <!--<form class="info">-->
+                <!--<input  type="text" id="name" class="form-control col-sm-2" placeholder="Имя" required>-->
+                <!--<input  type="text" id="email" class="form-control col-sm-2" placeholder="Email" required>-->
+                <!--<select  name="region" class="form-control col-sm-2" id="region" required>-->
+                    <!--<option value="RU-AD">Республика Адыгея</option>-->
+                    <!--<option value="RU-AL">Республика Алтай </option>-->
+                    <!--<option value="RU-BA">Республика Башкортостан </option>-->
+                    <!--<option value="RU-BU">Республика Бурятия </option>-->
+                    <!--<option value="RU-DA">Республика Дагестан </option>-->
+                    <!--<option value="RU-IN">Республика Ингушетия </option>-->
+                    <!--<option value="RU-KB">Кабардино-Балкарская республика </option>-->
+                    <!--<option value="RU-KL">Республика Калмыкия </option>-->
+                    <!--<option value="RU-KC">Карачаево-Черкесская республика </option>-->
+                    <!--<option value="RU-KR">Республика Карелия </option>-->
+                    <!--<option value="RU-KO">Республика Коми </option>-->
+                    <!--<option value="RU-CR">Республика Крым </option>-->
+                    <!--<option value="RU-ME">Республика Марий Эл </option>-->
+                    <!--<option value="RU-MO">Республика Мордовия </option>-->
+                    <!--<option value="RU-SA">Республика Саха (Якутия) </option>-->
+                    <!--<option value="RU-SE">Республика Северная Осетия — Алания </option>-->
+                    <!--<option value="RU-TA">Республика Татарстан </option>-->
+                    <!--<option value="RU-TY">Республика Тыва </option>-->
+                    <!--<option value="RU-UD">Удмуртская республика </option>-->
+                    <!--<option value="RU-KK">Республика Хакасия </option>-->
+                    <!--<option value="RU-CE">Чеченская республика </option>-->
+                    <!--<option value="RU-CU">Чувашская республика </option>-->
+                    <!--<option value="RU-ALT">Алтайский край </option>-->
+                    <!--<option value="RU-ZAB">Забайкальский край </option>-->
+                    <!--<option value="RU-KAM">Камчатский край </option>-->
+                    <!--<option value="RU-KDA">Краснодарский край </option>-->
+                    <!--<option value="RU-KYA">Красноярский край </option>-->
+                    <!--<option value="RU-PER">Пермский край </option>-->
+                    <!--<option value="RU-PRI">Приморский край </option>-->
+                    <!--<option value="RU-STA">Ставропольский край </option>-->
+                    <!--<option value="RU-KHA">Хабаровский край </option>-->
+                    <!--<option value="RU-AMU">Амурская область </option>-->
+                    <!--<option value="RU-ARK">Архангельская область </option>-->
+                    <!--<option value="RU-AST">Астраханская область </option>-->
+                    <!--<option value="RU-BEL">Белгородская область </option>-->
+                    <!--<option value="RU-BRY">Брянская область </option>-->
+                    <!--<option value="RU-VLA">Владимирская область </option>-->
+                    <!--<option value="RU-VGG">Волгоградская область </option>-->
+                    <!--<option value="RU-VLG">Вологодская область </option>-->
+                    <!--<option value="RU-VOR">Воронежская область </option>-->
+                    <!--<option value="RU-IVA">Ивановская область </option>-->
+                    <!--<option value="RU-IRK">Иркутская область </option>-->
+                    <!--<option value="RU-KGD">Калининградская область </option>-->
+                    <!--<option value="RU-KLU">Калужская область </option>-->
+                    <!--<option value="RU-KEM">Кемеровская область </option>-->
+                    <!--<option value="RU-KIR">Кировская область </option>-->
+                    <!--<option value="RU-KOS">Костромская область </option>-->
+                    <!--<option value="RU-KGN">Курганская область </option>-->
+                    <!--<option value="RU-KRS">Курская область </option>-->
+                    <!--<option value="RU-LEN">Ленинградская область </option>-->
+                    <!--<option value="RU-LIP">Липецкая область </option>-->
+                    <!--<option value="RU-MAG">Магаданская область </option>-->
+                    <!--<option value="RU-MOS">Московская область </option>-->
+                    <!--<option value="RU-MUR">Мурманская область </option>-->
+                    <!--<option value="RU-NIZ">Нижегородская область </option>-->
+                    <!--<option value="RU-NGR">Новгородская область </option>-->
+                    <!--<option value="RU-NVS">Новосибирская область </option>-->
+                    <!--<option value="RU-OMS">Омская область </option>-->
+                    <!--<option value="RU-ORE">Оренбургская область </option>-->
+                    <!--<option value="RU-ORL">Орловская область </option>-->
+                    <!--<option value="RU-PNZ">Пензенская область </option>-->
+                    <!--<option value="RU-PSK">Псковская область </option>-->
+                    <!--<option value="RU-ROS">Ростовская область </option>-->
+                    <!--<option value="RU-RYA">Рязанская область </option>-->
+                    <!--<option value="RU-SAM">Самарская область </option>-->
+                    <!--<option value="RU-SAR">Саратовская область </option>-->
+                    <!--<option value="RU-SAK">Сахалинская область </option>-->
+                    <!--<option value="RU-SVE">Свердловская область </option>-->
+                    <!--<option value="RU-SMO">Смоленская область </option>-->
+                    <!--<option value="RU-TAM">Тамбовская область </option>-->
+                    <!--<option value="RU-TVE">Тверская область </option>-->
+                    <!--<option value="RU-TOM">Томская область </option>-->
+                    <!--<option value="RU-TUL">Тульская область </option>-->
+                    <!--<option value="RU-TYU">Тюменская область </option>-->
+                    <!--<option value="RU-ULY">Ульяновская область </option>-->
+                    <!--<option value="RU-CHE">Челябинская область </option>-->
+                    <!--<option value="RU-YAR">Ярославская область </option>-->
+                    <!--<option value="RU-MOW">Москва </option>-->
+                    <!--<option value="RU-SPB">Санкт-Петербург </option>-->
+                    <!--<option value="RU-SEV">Севастополь </option>-->
+                    <!--<option value="RU-YEV">Еврейская автономная область </option>-->
+                    <!--<option value="RU-NEN">Ненецкий автономный округ </option>-->
+                    <!--<option value="RU-KHM">Ханты-Мансийский автономный округ - Югра </option>-->
+                    <!--<option value="RU-CHU">Чукотский автономный округ </option>-->
+                    <!--Добавлено через-->
+                <!--</select>-->
+                <!--<button id="send" type="submit"  class="btn btn-primary col-sm-2" data-toggle="tooltip" data-placement="top" title="При отправке заявления юристам вся личная информация не передается">Отправить</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
 
-    <div class="row buttons">
+    <div class="row buttons polina not-printable">
         <div class="col-sm-3">
             <a onClick="window.print()" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Распечатайте заявление из браузера или сохраните его в pdf">Распечатать заявление</a>
         </div>
@@ -305,48 +306,51 @@
         </div>
     </div>
 
-    <div id="success" class="alert alert-success" role="alert">
-        <button type="button" class="close"  aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-        Ваше заявление отправленно на проверку юристам
-    </div>
+    <!--alerts after sending data to P.O.L.I.N.A.-->
+    <!--<div id="success" class="alert alert-success" role="alert">-->
+        <!--<button type="button" class="close"  aria-label="Close">-->
+            <!--<span aria-hidden="true">×</span>-->
+        <!--</button>-->
+        <!--Ваше заявление отправленно на проверку юристам-->
+    <!--</div>-->
 
-    <div id="error" class="alert alert-danger" role="alert">
-        <button type="button" class="close"  aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-        Что-то пошло не так, попробуйте отправить еще раз
-    </div>
+    <!--<div id="error" class="alert alert-danger" role="alert">-->
+        <!--<button type="button" class="close"  aria-label="Close">-->
+            <!--<span aria-hidden="true">×</span>-->
+        <!--</button>-->
+        <!--Что-то пошло не так, попробуйте отправить еще раз-->
+    <!--</div>-->
 
-    <div id="fields" class="alert alert-danger" role="alert">
-        <button type="button" class="close"  aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-        Пожалуйста, заполните все поля формы
-    </div>
+    <!--<div id="fields" class="alert alert-danger" role="alert">-->
+        <!--<button type="button" class="close"  aria-label="Close">-->
+            <!--<span aria-hidden="true">×</span>-->
+        <!--</button>-->
+        <!--Пожалуйста, заполните все поля формы-->
+    <!--</div>-->
 
 </div>
 
-<footer>
-    <div class="copyright">Приложение разработано при поддержке
-        <a class="teplica-logo" href="https://te-st.ru/" target="_blank"><img src="styles/images/teplica-logo.svg" alt=""></a>
-        <a class="cc-logo" href="http://crisiscenter.ru/" target="_blank"><img src="styles/images/crisis-center-logo.png" alt=""></a>
+<footer class="not-printable">
+    <div class="copyright">Приложение разработано
+        <a class="cc-logo" href="../http://crisiscenter.ru/" target="_blank"><img src="../styles/images/crisis-center-logo.png" alt=""></a>
+        при поддержке
+        <a class="teplica-logo" href="../https://te-st.ru/" target="_blank"><img src="../styles/images/teplica-logo.svg" alt=""></a>
+
     </div>
 </footer>
 
-<script src="bower_components/jquery-1.12.4.min/index.js"></script>
-<script src="bower_components/bootstrap-css/js/bootstrap.js"></script>
-<script src="bower_components/underscore/underscore-min.js"></script>
-<script src="bower_components/backbone/backbone-min.js"></script>
-<script src="bower_components/rangy/rangy-core.js"></script>
-<script src="scripts/etch.js"></script>
-<script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
-<script src="bower_components/pdfmake/build/vfs_fonts.js "></script>
-<script src="bower_components/file-saver/FileSaver.min.js"></script>
-<script src="scripts/to.rtf.js"></script>
-<script src="scripts/med.docs.to.pdf.js"></script>
-<script src="scripts/to.polina.js "></script>
-<script src="scripts/script.js "></script>
+<script src="../bower_components/jquery-1.12.4.min/index.js"></script>
+<script src="../bower_components/bootstrap-css/js/bootstrap.js"></script>
+<script src="../bower_components/underscore/underscore-min.js"></script>
+<script src="../bower_components/backbone/backbone-min.js"></script>
+<script src="../bower_components/rangy/rangy-core.js"></script>
+<script src="../scripts/etch.js"></script>
+<script src="../bower_components/pdfmake/build/pdfmake.min.js"></script>
+<script src="../bower_components/pdfmake/build/vfs_fonts.js "></script>
+<script src="../bower_components/file-saver/FileSaver.min.js"></script>
+<script src="../scripts/to.rtf.js"></script>
+<script src="../scripts/harm.to.pdf.js"></script>
+<script src="../scripts/to.polina.js "></script>
+<script src="../scripts/script.js "></script>
 </body>
 </html>

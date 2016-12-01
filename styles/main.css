@@ -226,6 +226,7 @@ footer {
 .copyright .cc-logo {
   display: inline-block;
   vertical-align: inherit;
+  margin: 0 25px;
 }
 .copyright .cc-logo img {
   height: 45px;
